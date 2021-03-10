@@ -7,6 +7,7 @@ using Microsoft.Extensions.Hosting;
 using Servly.Core.Exceptions;
 using Servly.Core.Extensions;
 using System;
+using System.Threading;
 
 namespace Servly.Core.Internal
 {
@@ -18,7 +19,7 @@ namespace Servly.Core.Internal
         private Action<WebHostBuilderContext, IServiceCollection>? _configureServicesDelegate;
         private Action<WebHostBuilderContext, IServlyBuilder>? _configureServlyDelegate;
 
-        private bool _hostBuilt;
+        private static int _hostBuilt;
 
         public ServlyHostBuilder(string[]? args = null)
         {
@@ -71,10 +72,8 @@ namespace Servly.Core.Internal
 
         public IServlyHost Build()
         {
-            if (_hostBuilt)
+            if (Interlocked.Exchange(ref _hostBuilt, 1) == 1)
                 throw new ServlyHostAlreadyBuiltException();
-
-            _hostBuilt = true;
 
             var hostBuilder = Host.CreateDefaultBuilder(_args)
                 .ConfigureWebHostDefaults(webHostBuilder =>

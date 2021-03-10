@@ -7,6 +7,7 @@ using Servly.Core.Exceptions;
 using System;
 using System.Collections.Concurrent;
 using System.Collections.Generic;
+using System.Threading;
 
 namespace Servly.Core.Internal
 {
@@ -15,7 +16,7 @@ namespace Servly.Core.Internal
         private readonly List<Action<IServiceCollection>> _buildActions;
         private readonly ConcurrentDictionary<string, bool> _moduleRegistry;
 
-        private bool _built;
+        private static int _built;
 
         public ServlyBuilder(IServiceCollection services)
         {
@@ -67,10 +68,8 @@ namespace Servly.Core.Internal
 
         public void Build()
         {
-            if (_built)
+            if (Interlocked.Exchange(ref _built, 1) == 1)
                 throw new ServlyBuilderAlreadyBuiltException();
-
-            _built = true;
 
             foreach (var buildAction in _buildActions)
                 buildAction(Services);
