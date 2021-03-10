@@ -13,5 +13,9 @@
     <ItemGroup>
         <FrameworkReference Include="Microsoft.AspNetCore.App" />
     </ItemGroup>
+    
+    <ItemGroup>
+      <PackageReference Include="Figgle" Version="0.4.0" />
+    </ItemGroup>
 
 </Project>

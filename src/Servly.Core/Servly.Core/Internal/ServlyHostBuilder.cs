@@ -79,9 +79,13 @@ namespace Servly.Core.Internal
             var hostBuilder = Host.CreateDefaultBuilder(_args)
                 .ConfigureWebHostDefaults(webHostBuilder =>
                 {
-                    if (_configureServlyDelegate is not null)
-                        webHostBuilder.ConfigureServices((context, services) => services
-                            .AddServly(servlyBuilder => _configureServlyDelegate(context, servlyBuilder)));
+                    webHostBuilder.ConfigureServices((context, services) =>
+                    {
+                        if (_configureServlyDelegate is null)
+                            services.AddServly();
+                        else
+                            services.AddServly(servlyBuilder => _configureServlyDelegate(context, servlyBuilder));
+                    });
 
                     if (_configureServicesDelegate is not null)
                         webHostBuilder.ConfigureServices(_configureServicesDelegate);
