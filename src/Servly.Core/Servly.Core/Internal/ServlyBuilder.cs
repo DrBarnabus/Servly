@@ -4,6 +4,7 @@ using Microsoft.Extensions.Configuration;
 using Microsoft.Extensions.DependencyInjection;
 using Microsoft.Extensions.Options;
 using System;
+using System.Collections.Concurrent;
 using System.Collections.Generic;
 
 namespace Servly.Core.Internal
@@ -11,17 +12,29 @@ namespace Servly.Core.Internal
     internal class ServlyBuilder : IServlyBuilder
     {
         private readonly List<Action<IServiceCollection>> _buildActions;
+        private readonly ConcurrentDictionary<string, bool> _moduleRegistry;
 
         private bool _built;
 
         public ServlyBuilder(IServiceCollection services)
         {
             _buildActions = new List<Action<IServiceCollection>>();
+            _moduleRegistry = new ConcurrentDictionary<string, bool>();
 
             Services = services;
         }
 
         public IServiceCollection Services { get; }
+
+        public bool TryRegisterModule(string moduleName)
+        {
+            return _moduleRegistry.TryAdd(moduleName, true);
+        }
+
+        public bool IsModuleRegistered(string moduleName)
+        {
+            return _moduleRegistry.TryGetValue(moduleName, out bool value) && value;
+        }
 
         public void AddBuildAction(Action<IServiceCollection> buildActionDelegate)
         {

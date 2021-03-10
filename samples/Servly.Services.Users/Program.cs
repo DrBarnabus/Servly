@@ -3,6 +3,7 @@ using Microsoft.AspNetCore.Http;
 using Microsoft.Extensions.DependencyInjection;
 using Microsoft.Extensions.Options;
 using Servly.Core;
+using Servly.Core.Extensions;
 using Servly.Core.Options;
 using System.Threading.Tasks;
 
@@ -18,6 +19,7 @@ namespace Servly.Services.Users
         private static IServlyHostBuilder CreateHostBuilder(string[] args)
         {
             return ServlyHost.CreateDefaultBuilder(args)
+                .ConfigureServly(builder => builder.AddServiceId())
                 .ConfigureServices(services => services.AddRouting())
                 .Configure(app => app
                     .UseRouting()

@@ -9,6 +9,10 @@ namespace Servly.Core
     {
         IServiceCollection Services { get; }
 
+        bool TryRegisterModule(string moduleName);
+
+        bool IsModuleRegistered(string moduleName);
+
         void AddBuildAction(Action<IServiceCollection> buildActionDelegate);
 
         void AddInitializer<TInitializer>()
