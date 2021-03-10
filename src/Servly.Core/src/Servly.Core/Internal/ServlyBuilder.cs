@@ -3,6 +3,7 @@
 using Microsoft.Extensions.Configuration;
 using Microsoft.Extensions.DependencyInjection;
 using Microsoft.Extensions.Options;
+using Servly.Core.Exceptions;
 using System;
 using System.Collections.Concurrent;
 using System.Collections.Generic;
@@ -66,9 +67,8 @@ namespace Servly.Core.Internal
 
         public void Build()
         {
-            // TODO: Replace with ServlyAlreadyBuiltException (or a generic ServlyException)
             if (_built)
-                throw new InvalidOperationException("Build can only be called once.");
+                throw new ServlyBuilderAlreadyBuiltException();
 
             _built = true;
 

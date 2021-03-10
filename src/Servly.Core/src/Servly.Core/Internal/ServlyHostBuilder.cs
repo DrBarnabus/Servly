@@ -4,6 +4,7 @@ using Microsoft.AspNetCore.Builder;
 using Microsoft.AspNetCore.Hosting;
 using Microsoft.Extensions.DependencyInjection;
 using Microsoft.Extensions.Hosting;
+using Servly.Core.Exceptions;
 using Servly.Core.Extensions;
 using System;
 
@@ -70,9 +71,8 @@ namespace Servly.Core.Internal
 
         public IServlyHost Build()
         {
-            // TODO: Replace with ServlyHostAlreadyBuiltException (or a generic ServlyException)
             if (_hostBuilt)
-                throw new InvalidOperationException("Build can only be called once.");
+                throw new ServlyHostAlreadyBuiltException();
 
             _hostBuilt = true;
 
