@@ -7,7 +7,7 @@
     </PropertyGroup>
 
     <ItemGroup>
-      <ProjectReference Include="..\..\src\Servly.Core\Servly.Core\Servly.Core.csproj" />
+      <ProjectReference Include="..\..\src\Servly.Core\src\Servly.Core\Servly.Core.csproj" />
     </ItemGroup>
 
 </Project>
