@@ -352,3 +352,9 @@ MigrationBackup/
 # JetBrains Rider
 .idea/
 *.sln.iml
+
+# Cake
+tools
+
+# CI/Build dotnet Install
+.dotnet

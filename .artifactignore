@@ -1,0 +1,5 @@
+**/*
+
+!artifacts/*/test-results/**/*
+!artifacts/*/*.nupkg
+!artifacts/gitversion.json

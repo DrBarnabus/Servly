@@ -1,0 +1,13 @@
+assembly-versioning-scheme: MajorMinorPatch
+assembly-file-versioning-scheme: MajorMinorPatchTag
+assembly-informational-format: '{SemVer}'
+mode: ContinuousDeployment
+branches:
+  release:
+    tag: preview
+  develop:
+    tag: beta
+  pull-request:
+    tag: PR
+ignore:
+  sha: []

@@ -1,0 +1,43 @@
+variables:
+  DOTNET_SKIP_FIRST_TIME_EXPERIENCE: 'true'
+  DOTNET_CLI_TELEMETRY_OPTOUT: 'true'
+
+stages:
+- stage: Build
+  displayName: 'Build'
+  jobs:
+  - job: Build
+    strategy:
+      matrix:
+        'Windows':
+          VM_IMAGE: 'windows-latest'
+        'Linux':
+          VM_IMAGE: 'ubuntu-latest'
+        'macOS':
+          VM_IMAGE: 'macOS-latest'
+    pool:
+      vmImage: $(VM_IMAGE)
+    steps:
+    - template: .azurepipelines/build.yml
+
+- stage: Publish
+  displayName: 'Publish'
+  dependsOn:
+  - Build
+  condition: succeeded()
+  jobs:
+  - job: Publish
+    pool:
+      vmImage: ubuntu-latest
+    strategy:
+      matrix:
+        CI:
+          TASK_NAME: 'CI'
+        Coverage:
+          TASK_NAME: 'Coverage'
+        NuGet:
+          Task_NAME: 'NuGet'
+    steps:
+    - template: .azurepipelines/publish.yml
+      parameters:
+        taskName: $(TASK_NAME)

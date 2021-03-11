@@ -1,0 +1,10 @@
+steps:
+- template: common-steps.yml
+- pwsh: ./build.ps1 -target Pack
+  displayName: '[Cake Build, Test & Pack]'
+  env:
+    ENABLED_UNIT_TESTS: $(ENABLED_UNIT_TESTS)
+- publish: $(System.DefaultWorkingDirectory)/artifacts
+  displayName: 'Upload artifacts Folder'
+  condition: and(succeeded(), eq( variables['Agent.OS'], 'Linux' ))
+  artifact: storage
