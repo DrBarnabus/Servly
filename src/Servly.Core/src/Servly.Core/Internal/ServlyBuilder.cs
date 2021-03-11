@@ -16,7 +16,7 @@ namespace Servly.Core.Internal
         private readonly List<Action<IServiceCollection>> _buildActions;
         private readonly ConcurrentDictionary<string, bool> _moduleRegistry;
 
-        private static int _built;
+        private int _built;
 
         public ServlyBuilder(IServiceCollection services)
         {

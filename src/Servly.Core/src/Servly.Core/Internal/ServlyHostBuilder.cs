@@ -19,7 +19,7 @@ namespace Servly.Core.Internal
         private Action<WebHostBuilderContext, IServiceCollection>? _configureServicesDelegate;
         private Action<WebHostBuilderContext, IServlyBuilder>? _configureServlyDelegate;
 
-        private static int _hostBuilt;
+        private int _hostBuilt;
 
         public ServlyHostBuilder(string[]? args = null)
         {

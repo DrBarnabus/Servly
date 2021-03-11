@@ -4,18 +4,24 @@
         <Title>Servly.Core</Title>
         <Description>The base package for Servly applications.</Description>
         <Company>DrBarnabus</Company>
-        
+
         <TargetFramework>net5.0</TargetFramework>
         <LangVersion>latest</LangVersion>
         <Nullable>enable</Nullable>
     </PropertyGroup>
-    
+
     <ItemGroup>
         <FrameworkReference Include="Microsoft.AspNetCore.App" />
     </ItemGroup>
-    
+
     <ItemGroup>
       <PackageReference Include="Figgle" Version="0.4.0" />
+    </ItemGroup>
+
+    <ItemGroup>
+        <AssemblyAttribute Include="System.Runtime.CompilerServices.InternalsVisibleToAttribute">
+            <_Parameter1>$(AssemblyName).UnitTests</_Parameter1>
+        </AssemblyAttribute>
     </ItemGroup>
 
 </Project>
