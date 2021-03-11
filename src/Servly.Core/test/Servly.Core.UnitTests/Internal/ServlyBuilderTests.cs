@@ -67,10 +67,7 @@ namespace Servly.Core.UnitTests.Internal
             var servlyBuilder = new Core.Internal.ServlyBuilder(mockServiceCollection.Object);
 
             var serviceDescriptor = new ServiceDescriptor(typeof(ServlyBuilderTests), typeof(ServlyBuilderTests));
-            servlyBuilder.AddBuildAction(sc =>
-            {
-                sc.Add(serviceDescriptor);
-            });
+            servlyBuilder.AddBuildAction(sc => sc.Add(serviceDescriptor));
 
             servlyBuilder.Build();
 

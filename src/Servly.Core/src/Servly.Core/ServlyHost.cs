@@ -1,7 +1,6 @@
 ﻿// Copyright (c) 2021 DrBarnabus
 
 using Servly.Core.Internal;
-using System;
 
 namespace Servly.Core
 {

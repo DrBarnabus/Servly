@@ -1,3 +1,5 @@
+// Copyright (c) 2021 DrBarnabus
+
 using Microsoft.AspNetCore.Builder;
 using Microsoft.AspNetCore.Http;
 using Microsoft.Extensions.DependencyInjection;
