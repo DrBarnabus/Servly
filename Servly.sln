@@ -1,8 +1,37 @@
 ﻿
 Microsoft Visual Studio Solution File, Format Version 12.00
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "src", "src", "{5CCB10AB-4856-4564-94CE-CEA117E174B9}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Core", "Core", "{6AF2DFF1-28F1-47C1-850F-FB1FA0CDD4D3}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "src", "src", "{80C64D86-BC92-4478-8B22-5A3EA95AACF8}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Servly.Core", "src\Core\src\Servly.Core\Servly.Core.csproj", "{4932FB70-6F08-4A88-9770-EDC678DAFC66}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "test", "test", "{7699E96F-902C-43F8-909A-39E3C4A6A021}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Servly.Core.UnitTests", "src\Core\test\Servly.Core.UnitTests\Servly.Core.UnitTests.csproj", "{E721BEB1-2269-47BD-9890-68E6F0D418A2}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
 		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(NestedProjects) = preSolution
+		{6AF2DFF1-28F1-47C1-850F-FB1FA0CDD4D3} = {5CCB10AB-4856-4564-94CE-CEA117E174B9}
+		{80C64D86-BC92-4478-8B22-5A3EA95AACF8} = {6AF2DFF1-28F1-47C1-850F-FB1FA0CDD4D3}
+		{4932FB70-6F08-4A88-9770-EDC678DAFC66} = {80C64D86-BC92-4478-8B22-5A3EA95AACF8}
+		{7699E96F-902C-43F8-909A-39E3C4A6A021} = {6AF2DFF1-28F1-47C1-850F-FB1FA0CDD4D3}
+		{E721BEB1-2269-47BD-9890-68E6F0D418A2} = {7699E96F-902C-43F8-909A-39E3C4A6A021}
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{4932FB70-6F08-4A88-9770-EDC678DAFC66}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{4932FB70-6F08-4A88-9770-EDC678DAFC66}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{4932FB70-6F08-4A88-9770-EDC678DAFC66}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{4932FB70-6F08-4A88-9770-EDC678DAFC66}.Release|Any CPU.Build.0 = Release|Any CPU
+		{E721BEB1-2269-47BD-9890-68E6F0D418A2}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{E721BEB1-2269-47BD-9890-68E6F0D418A2}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{E721BEB1-2269-47BD-9890-68E6F0D418A2}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{E721BEB1-2269-47BD-9890-68E6F0D418A2}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 EndGlobal

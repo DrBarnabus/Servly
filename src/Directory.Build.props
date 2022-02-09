@@ -1,0 +1,27 @@
+<Project>
+
+    <PropertyGroup>
+        <CurrentYear>$([System.DateTime]::Today.Year</CurrentYear>
+        <Authors>DrBarnabus</Authors>
+        <Copyright>Copyright DrBarnabus $(CurrentYear).</Copyright>
+        <Company>$(Authors)</Company>
+
+        <PackageProjectUrl>https://github.com/DrBarnabus/Servly</PackageProjectUrl>
+        <PackageRequiresLicenseAcceptance>false</PackageRequiresLicenseAcceptance>
+        <PackageLicenseExpression>MIT</PackageLicenseExpression>
+
+        <RepositoryUrl>https://github.com/DrBarnabus/Servly</RepositoryUrl>
+        <RepositoryType>git</RepositoryType>
+    </PropertyGroup>
+
+    <PropertyGroup>
+        <DebugType>embedded</DebugType>
+        <LangVersion>latest</LangVersion>
+        <Nullable>enable</Nullable>
+        <ImplicitUsings>enable</ImplicitUsings>
+
+        <TreatWarningsAsErrors>true</TreatWarningsAsErrors>
+        <WarningsAsErrors />
+    </PropertyGroup>
+
+</Project>
