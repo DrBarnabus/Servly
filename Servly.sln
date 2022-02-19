@@ -22,6 +22,10 @@ Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "test", "test", "{330A8670-F
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Servly.Authentication.UnitTests", "src\Authentication\test\Servly.Authentication.UnitTests\Servly.Authentication.UnitTests.csproj", "{247D4988-E4D2-4F79-A62E-8D40AD4D42AD}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Servly.Authentication.AspNetCore", "src\Authentication\src\Servly.Authentication.AspNetCore\Servly.Authentication.AspNetCore.csproj", "{54C522A6-768A-42F8-A4DA-74B25B370850}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Servly.Authentication.AspNetCore.UnitTests", "src\Authentication\test\Servly.Authentication.AspNetCore.UnitTests\Servly.Authentication.AspNetCore.UnitTests.csproj", "{30433C7B-7EB0-44D1-B30F-B1219FB3967B}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -38,6 +42,8 @@ Global
 		{2D8B4224-E7D3-40A6-ACDE-192FCCCF0B44} = {D92635DA-9013-4C1D-A6A3-92FD7064DE75}
 		{330A8670-FC70-46A1-B9C3-EA817D486B2E} = {A37C1502-AB78-43CF-B151-3C38E70B1BE5}
 		{247D4988-E4D2-4F79-A62E-8D40AD4D42AD} = {330A8670-FC70-46A1-B9C3-EA817D486B2E}
+		{54C522A6-768A-42F8-A4DA-74B25B370850} = {D92635DA-9013-4C1D-A6A3-92FD7064DE75}
+		{30433C7B-7EB0-44D1-B30F-B1219FB3967B} = {330A8670-FC70-46A1-B9C3-EA817D486B2E}
 	EndGlobalSection
 	GlobalSection(ProjectConfigurationPlatforms) = postSolution
 		{4932FB70-6F08-4A88-9770-EDC678DAFC66}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
@@ -56,5 +62,13 @@ Global
 		{247D4988-E4D2-4F79-A62E-8D40AD4D42AD}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{247D4988-E4D2-4F79-A62E-8D40AD4D42AD}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{247D4988-E4D2-4F79-A62E-8D40AD4D42AD}.Release|Any CPU.Build.0 = Release|Any CPU
+		{54C522A6-768A-42F8-A4DA-74B25B370850}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{54C522A6-768A-42F8-A4DA-74B25B370850}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{54C522A6-768A-42F8-A4DA-74B25B370850}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{54C522A6-768A-42F8-A4DA-74B25B370850}.Release|Any CPU.Build.0 = Release|Any CPU
+		{30433C7B-7EB0-44D1-B30F-B1219FB3967B}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{30433C7B-7EB0-44D1-B30F-B1219FB3967B}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{30433C7B-7EB0-44D1-B30F-B1219FB3967B}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{30433C7B-7EB0-44D1-B30F-B1219FB3967B}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 EndGlobal

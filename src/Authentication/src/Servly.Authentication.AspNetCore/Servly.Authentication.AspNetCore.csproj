@@ -1,0 +1,21 @@
+<Project Sdk="Microsoft.NET.Sdk">
+
+    <PropertyGroup>
+        <TargetFramework>net6.0</TargetFramework>
+
+        <PackageId>Servly.Authentication.AspNetCore</PackageId>
+        <Title>Servly</Title>
+
+        <Product>$(AssemblyName)</Product>
+    </PropertyGroup>
+
+    <ItemGroup>
+        <FrameworkReference Include="Microsoft.AspNetCore.App" />
+    </ItemGroup>
+
+    <ItemGroup>
+      <ProjectReference Include="..\..\..\Core\src\Servly.Core\Servly.Core.csproj" />
+      <ProjectReference Include="..\Servly.Authentication\Servly.Authentication.csproj" />
+    </ItemGroup>
+
+</Project>
