@@ -1,0 +1,19 @@
+﻿using Cake.Frosting;
+using Common;
+using Common.Utilities;
+using Microsoft.Extensions.DependencyInjection;
+
+namespace Publish;
+
+public class Startup : IFrostingStartup
+{
+    public void Configure(IServiceCollection services)
+    {
+        services.UseLifetime<BuildLifetime>();
+        services.UseTaskLifetime<BuildTaskLifetime>();
+
+        services.UseWorkingDirectory(Extensions.GetRootDirectory());
+
+        services.UseTool(new Uri("dotnet:?package=GitVersion.Tool&version=5.8.2"));
+    }
+}

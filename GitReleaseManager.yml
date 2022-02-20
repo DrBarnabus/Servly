@@ -1,0 +1,18 @@
+issue-labels-include:
+- breaking change
+- feature
+- bug
+- documentation
+- dependencies
+issue-labels-exclude:
+- build
+issue-labels-alias:
+- name:    documentation
+  header:  Documentation
+  plural:  documentation
+create:
+  include-footer: true
+  footer-heading: Changes
+  footer-content: You can view the full `CHANGELOG.md` [here⇗](https://github.com/DrBarnabus/Servly/blob/main/CHANGELOG.md).
+  include-sha-section: false
+  allow-update-to-published: true

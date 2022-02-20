@@ -352,3 +352,10 @@ MigrationBackup/
 # JetBrains Rider
 .idea
 *.sln.iml
+
+#Cake
+tools
+run
+artifacts
+!build/Publish
+!build/Release
