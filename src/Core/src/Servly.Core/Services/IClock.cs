@@ -1,4 +1,4 @@
-﻿namespace Servly.Core.Services.Interfaces;
+﻿namespace Servly.Core.Services;
 
 /// <summary>
 ///     Provides an abstraction of the system clock to facilitate unit testing.

@@ -1,6 +1,4 @@
-﻿using Servly.Core.Services.Interfaces;
-
-namespace Servly.Core.Services.Implementations;
+﻿namespace Servly.Core.Services.Implementations;
 
 /// <summary>
 ///     Provides access to the system clock for consumers of <see cref="IClock" />.
