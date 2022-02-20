@@ -29,7 +29,7 @@ public class BuildLifetime : BuildLifetimeBase<BuildContext>
     private static void SetMsBuildSettingsVersion(BuildContext context)
     {
         var msBuildSettings = context.MsBuildSettings;
-        (var gitVersion, string? version, string? semVersion) = context.Version!;
+        (var gitVersion, string? version, string? semVersion, _) = context.Version!;
 
         msBuildSettings.SetVersion(semVersion);
         msBuildSettings.SetAssemblyVersion(version);
