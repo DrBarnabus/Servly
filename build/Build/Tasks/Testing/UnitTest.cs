@@ -40,7 +40,7 @@ public sealed class UnitTest : FrostingTask<BuildContext>
 
         foreach (string framework in frameworks)
         {
-            var projects = context.GetFiles($"{Paths.Src}/**/test/**/*.UnitTests.csproj");
+            var projects = context.GetFiles($"{Paths.Src}/**/test/**/*.{{Unit,Functional}}Tests.csproj");
             foreach (var project in projects)
                 TestProjectForTarget(context, project, framework);
         }

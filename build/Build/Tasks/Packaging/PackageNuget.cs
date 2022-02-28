@@ -8,6 +8,7 @@ namespace Build.Tasks.Packaging;
 
 [TaskName(nameof(PackageNuget))]
 [TaskDescription("Creates the nuget packages")]
+[IsDependentOn(typeof(Build))]
 public sealed class PackageNuget : FrostingTask<BuildContext>
 {
     public override void Run(BuildContext context)
@@ -29,7 +30,8 @@ public sealed class PackageNuget : FrostingTask<BuildContext>
         string[] projectPaths = {
             "./src/Core/src/Servly.Core",
             "./src/Authentication/src/Servly.Authentication",
-            "./src/Authentication/src/Servly.Authentication.AspNetCore"
+            "./src/Authentication/src/Servly.Authentication.AspNetCore",
+            "./src/Idempotency/src/Servly.Idempotency.AspNetCore"
         };
 
         foreach (string project in projectPaths)
