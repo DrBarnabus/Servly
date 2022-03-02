@@ -36,7 +36,7 @@ public class AuthenticationContext<TState> : IAuthenticationContext<TState>
         private bool _isDisposed;
 
         public TState State { get; }
-        public Scope? Parent { get; }
+        public Scope? Parent { get; private set; }
 
         public Scope(AuthenticationContext<TState> context, TState state, Scope? parent)
         {
@@ -51,6 +51,7 @@ public class AuthenticationContext<TState> : IAuthenticationContext<TState>
             if (_isDisposed) return;
 
             _context._currentScope.Value = Parent;
+            Parent = null;
             _isDisposed = true;
         }
     }

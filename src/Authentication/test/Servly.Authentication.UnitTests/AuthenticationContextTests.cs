@@ -77,12 +77,15 @@ public class AuthenticationContextTests
     [Fact]
     public void ShouldReturnOriginalStateWhenModificationIsPoppedViaDisposableTwice()
     {
-        var originalState = new AuthenticationContextState
-        {
-            IsAuthenticated = true,
-            SubjectId = Guid.Parse("ecf06726-3f30-45ca-b68d-1f5bd7fa5261")
-        };
+        var originalState = new AuthenticationContextState();
         var sut = new AuthenticationContext<AuthenticationContextState>(originalState);
+
+        using var firstState = sut.SetContext(_ => { });
+        using var secondState = sut.SetContext(state =>
+        {
+            state.IsAuthenticated = true;
+            state.SubjectId = Guid.Parse("ecf06726-3f30-45ca-b68d-1f5bd7fa5261");
+        });
 
         var disposable = sut.SetContext(state =>
         {
@@ -93,15 +96,14 @@ public class AuthenticationContextTests
         newState.ShouldNotBeNull();
         newState.ShouldNotBeSameAs(originalState);
         newState.IsAuthenticated.ShouldBe(false);
-        newState.SubjectId.ShouldBe(originalState.SubjectId);
+        newState.SubjectId.ShouldBe(Guid.Parse("ecf06726-3f30-45ca-b68d-1f5bd7fa5261"));
 
         disposable.Dispose();
         disposable.Dispose();
 
         var poppedState = sut.GetState();
         poppedState.ShouldNotBeNull();
-        poppedState.ShouldBeSameAs(originalState);
         poppedState.IsAuthenticated.ShouldBe(true);
-        poppedState.SubjectId.ShouldBe(originalState.SubjectId);
+        poppedState.SubjectId.ShouldBe(Guid.Parse("ecf06726-3f30-45ca-b68d-1f5bd7fa5261"));
     }
 }
