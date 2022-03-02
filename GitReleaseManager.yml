@@ -1,15 +1,34 @@
 issue-labels-include:
-- breaking change
-- feature
-- bug
-- documentation
-- dependencies
+- 'breaking-change'
+- 'type: feature'
+- 'type: fix'
+- 'type: perf'
+- 'type: docs'
 issue-labels-exclude:
-- build
+- 'type: deps'
+- 'type: style'
+- 'type: ci'
+- 'type: chore'
+- 'type: build'
+- 'type: refactor'
+- 'duplicate'
+- 'stale'
 issue-labels-alias:
-- name:    documentation
-  header:  Documentation
-  plural:  documentation
+- name: breaking-change
+  header: 'Breaking Change'
+  plural: 'Breaking Changes'
+- name: 'type: feature'
+  header: 'Feature'
+  plural: 'Features'
+- name: 'type: fix'
+  header: 'Fixes'
+  plural: 'Fixes'
+- name: 'type: perf'
+  header: 'Performance Improvement'
+  plural: 'Performance Improvements'
+- name: 'type: docs'
+  header: 'Documentation Change'
+  plural: 'Documentation Changes'
 create:
   include-footer: true
   footer-heading: Changes
