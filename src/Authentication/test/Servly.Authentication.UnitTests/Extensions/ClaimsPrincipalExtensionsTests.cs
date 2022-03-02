@@ -623,7 +623,8 @@ public class ClaimsPrincipalExtensionsTests
     public void GetClaimValueAsEnum_ShouldThrowAnExceptionWhenTEnumIsNotAnEnum()
     {
         var principal = CreatePrincipal("ClaimType", "TestValue");
-        Should.Throw<ArgumentException>(() => ClaimsPrincipalExtensions.GetClaimValueAsEnum<NotAnEnum>(principal, "ClaimType", false));
+        var exception = Should.Throw<ArgumentException>(() => ClaimsPrincipalExtensions.GetClaimValueAsEnum<NotAnEnum>(principal, "ClaimType", false));
+        exception.Message.ShouldBe("Servly.Authentication.UnitTests.Extensions.ClaimsPrincipalExtensionsTests+NotAnEnum is not an enum. (Parameter 'typeof(TEnum).IsEnum')");
     }
 
     [Fact]
