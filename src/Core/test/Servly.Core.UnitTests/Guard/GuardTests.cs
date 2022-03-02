@@ -127,4 +127,32 @@ public class GuardTests
         var exception = Should.Throw<ArgumentException>(Subject);
         exception.Message.ShouldBe("Value is     Some Value. (Parameter 'false')");
     }
+
+    [Fact]
+    public void GuardInterpolatedStringHandler_ShouldNotAppendWhenConditionIsTrue()
+    {
+        // Setup
+        var mockedToString = new MockedToString();
+        void Subject() => Core.Guard.Assert(true, $"Value is {mockedToString}");
+
+        // Act
+        Should.NotThrow(Subject);
+
+        // Assert
+        mockedToString.CallCount.ShouldBe(0);
+    }
+
+    [Fact]
+    public void GuardInterpolatedStringHandler_ShouldAppendWhenConditionIsFalse()
+    {
+        // Setup
+        var mockedToString = new MockedToString();
+        void Subject() => Core.Guard.Assert(false, $"Value is {mockedToString}");
+
+        // Act
+        Should.Throw<ArgumentException>(Subject);
+
+        // Assert
+        mockedToString.CallCount.ShouldBe(1);
+    }
 }

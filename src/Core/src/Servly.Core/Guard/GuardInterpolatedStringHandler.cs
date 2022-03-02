@@ -13,6 +13,7 @@ public ref struct GuardInterpolatedStringHandler
         {
             _innerHandler = default;
             shouldAppend = false;
+            return;
         }
 
         _innerHandler = new DefaultInterpolatedStringHandler(literalLength, formattedCount);
