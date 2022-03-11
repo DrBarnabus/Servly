@@ -4,9 +4,10 @@
         <TargetFramework>net6.0</TargetFramework>
 
         <PackageId>Servly.Authentication</PackageId>
-        <Title>Servly</Title>
-
-        <Product>$(AssemblyName)</Product>
+        <PackageTags>Servly;Authentication;Claims Principal;Authentication Context;</PackageTags>
+        <Description>
+            Contextual Authentication and Claims Principal handling extensions for a Servly Application.
+        </Description>
     </PropertyGroup>
 
     <ItemGroup>

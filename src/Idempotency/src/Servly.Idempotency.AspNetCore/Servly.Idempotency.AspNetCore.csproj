@@ -4,9 +4,7 @@
         <TargetFramework>net6.0</TargetFramework>
 
         <PackageId>Servly.Idempotency.AspNetCore</PackageId>
-        <Title>Servly</Title>
-
-        <Product>$(AssemblyName)</Product>
+        <PackageTags>Servly;AspNetCore;Idempotency;Middleware;</PackageTags>
     </PropertyGroup>
 
     <ItemGroup>

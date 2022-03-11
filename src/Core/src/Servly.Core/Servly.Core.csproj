@@ -4,9 +4,10 @@
         <TargetFramework>net6.0</TargetFramework>
         
         <PackageId>Servly.Core</PackageId>
-        <Title>Servly</Title>
-        
-        <Product>$(AssemblyName)</Product>
+        <PackageTags>Servly</PackageTags>
+        <Description>
+            The base package for a Servly Application including base types needed for other packages/modules.
+        </Description>
     </PropertyGroup>
 
     <ItemGroup>
