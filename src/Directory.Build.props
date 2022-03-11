@@ -1,7 +1,7 @@
 <Project>
 
     <PropertyGroup>
-        <CurrentYear>$([System.DateTime]::Today.Year</CurrentYear>
+        <CurrentYear>$([System.DateTime]::Today.Year)</CurrentYear>
         <Authors>DrBarnabus</Authors>
         <Copyright>Copyright DrBarnabus $(CurrentYear).</Copyright>
         <Company>$(Authors)</Company>

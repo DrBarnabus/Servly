@@ -30,7 +30,7 @@ public class UtilitiesTests
     public void GetAssemblyInformationalVersion_ShouldReturnCorrectVersion()
     {
         // Setup
-        string expectedValue = typeof(UtilitiesTests).Assembly?
+        string expectedValue = typeof(UtilitiesTests).Assembly
             .GetCustomAttribute<AssemblyInformationalVersionAttribute>()?
             .InformationalVersion.Insert(0, "v") ?? "unknown";
 

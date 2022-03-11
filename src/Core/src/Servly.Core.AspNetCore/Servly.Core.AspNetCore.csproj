@@ -1,0 +1,20 @@
+<Project Sdk="Microsoft.NET.Sdk">
+
+    <PropertyGroup>
+        <TargetFramework>net6.0</TargetFramework>
+
+        <PackageId>Servly.Core.AspNetCore</PackageId>
+        <Title>Servly</Title>
+
+        <Product>$(AssemblyName)</Product>
+    </PropertyGroup>
+
+    <ItemGroup>
+        <FrameworkReference Include="Microsoft.AspNetCore.App" />
+    </ItemGroup>
+
+    <ItemGroup>
+      <ProjectReference Include="..\Servly.Core\Servly.Core.csproj" />
+    </ItemGroup>
+
+</Project>

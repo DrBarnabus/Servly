@@ -42,6 +42,8 @@ Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "test", "test", "{D2947823-1
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Servly.Idempotency.AspNetCore.FunctionalTests", "src\Idempotency\test\Servly.Idempotency.AspNetCore.FunctionalTests\Servly.Idempotency.AspNetCore.FunctionalTests.csproj", "{2E4F4E33-800C-40D9-9580-C4CB049EDFDF}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Servly.Core.AspNetCore", "src\Core\src\Servly.Core.AspNetCore\Servly.Core.AspNetCore.csproj", "{A9E7371D-A039-4FF1-B407-CB8137E0C727}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -68,6 +70,7 @@ Global
 		{0B8A0EBC-1A5A-4B0A-8DD4-D9D57A2A18D8} = {F00E7D6B-7C43-4C03-B75C-38F702DFB3AC}
 		{D2947823-19D6-4114-AF58-DCA5B192245E} = {DFAAB603-0919-474D-9577-30F81EC4EDEE}
 		{2E4F4E33-800C-40D9-9580-C4CB049EDFDF} = {D2947823-19D6-4114-AF58-DCA5B192245E}
+		{A9E7371D-A039-4FF1-B407-CB8137E0C727} = {80C64D86-BC92-4478-8B22-5A3EA95AACF8}
 	EndGlobalSection
 	GlobalSection(ProjectConfigurationPlatforms) = postSolution
 		{4932FB70-6F08-4A88-9770-EDC678DAFC66}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
@@ -106,5 +109,9 @@ Global
 		{2E4F4E33-800C-40D9-9580-C4CB049EDFDF}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{2E4F4E33-800C-40D9-9580-C4CB049EDFDF}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{2E4F4E33-800C-40D9-9580-C4CB049EDFDF}.Release|Any CPU.Build.0 = Release|Any CPU
+		{A9E7371D-A039-4FF1-B407-CB8137E0C727}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{A9E7371D-A039-4FF1-B407-CB8137E0C727}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{A9E7371D-A039-4FF1-B407-CB8137E0C727}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{A9E7371D-A039-4FF1-B407-CB8137E0C727}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 EndGlobal
