@@ -13,6 +13,7 @@ public static class ServiceCollectionExtensions
         Action<IServlyBuilder>? configureServly = null)
     {
         var servlyBuilder = ServlyBuilder.Create(services, configuration);
+        servlyBuilder.AddSystemClock();
 
         servlyBuilder.AddOptions<ServlyOptions>(MainConfigurationSection, options => !string.IsNullOrEmpty(options.ServiceName));
 
