@@ -1,9 +1,11 @@
 ﻿using Figgle;
 using Microsoft.Extensions.Configuration;
 using Microsoft.Extensions.DependencyInjection;
+using Servly.Core;
 using Servly.Core.StartupInformation;
 
-namespace Servly.Core.Extensions;
+// ReSharper disable once CheckNamespace
+namespace Servly.Extensions;
 
 public static class ServiceCollectionExtensions
 {

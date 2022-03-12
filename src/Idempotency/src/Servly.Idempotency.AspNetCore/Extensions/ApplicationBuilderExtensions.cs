@@ -1,7 +1,8 @@
 ﻿using Microsoft.AspNetCore.Builder;
 using Servly.Idempotency.AspNetCore.Middleware;
 
-namespace Servly.Idempotency.AspNetCore.Extensions;
+// ReSharper disable once CheckNamespace
+namespace Servly.Extensions;
 
 public static class ApplicationBuilderExtensions
 {

@@ -1,9 +1,11 @@
 ﻿using Microsoft.Extensions.DependencyInjection;
 using Servly.Core;
+using Servly.Idempotency.AspNetCore;
 using Servly.Idempotency.AspNetCore.Implementations;
 using Servly.Idempotency.AspNetCore.Middleware;
 
-namespace Servly.Idempotency.AspNetCore.Extensions;
+// ReSharper disable once CheckNamespace
+namespace Servly.Extensions;
 
 public static class ServlyBuilderExtensions
 {

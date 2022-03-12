@@ -1,7 +1,9 @@
 ﻿using Microsoft.Extensions.DependencyInjection;
+using Servly.Authentication;
 using Servly.Core;
 
-namespace Servly.Authentication.Extensions;
+// ReSharper disable once CheckNamespace
+namespace Servly.Extensions;
 
 public static class ServlyBuilderExtensions
 {

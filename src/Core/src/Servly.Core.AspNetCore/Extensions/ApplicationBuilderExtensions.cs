@@ -3,7 +3,7 @@ using Microsoft.Extensions.DependencyInjection;
 using Servly.Core.Implementations;
 
 // ReSharper disable once CheckNamespace
-namespace Servly.Core.Extensions;
+namespace Servly.Extensions;
 
 public static class ApplicationBuilderExtensions
 {

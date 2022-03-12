@@ -1,8 +1,10 @@
 ﻿using Microsoft.Extensions.DependencyInjection;
 using Servly.Core;
+using Servly.Persistence.Redis;
 using StackExchange.Redis;
 
-namespace Servly.Persistence.Redis.Extensions;
+// ReSharper disable once CheckNamespace
+namespace Servly.Extensions;
 
 public static class ServlyBuilderExtensions
 {

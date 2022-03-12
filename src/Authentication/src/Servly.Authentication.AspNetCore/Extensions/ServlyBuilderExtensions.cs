@@ -1,11 +1,12 @@
 ﻿using Microsoft.AspNetCore.Http;
 using Microsoft.Extensions.DependencyInjection;
 using Microsoft.Extensions.Logging;
+using Servly.Authentication;
 using Servly.Authentication.AspNetCore.Middleware;
-using Servly.Authentication.Extensions;
 using Servly.Core;
 
-namespace Servly.Authentication.AspNetCore.Extensions;
+// ReSharper disable once CheckNamespace
+namespace Servly.Extensions;
 
 public static class ServlyBuilderExtensions
 {
