@@ -9,6 +9,7 @@ using Microsoft.Extensions.DependencyInjection;
 using Microsoft.Extensions.Hosting;
 using Microsoft.Extensions.Primitives;
 using Servly.Idempotency.AspNetCore.Attributes;
+using Servly.Idempotency.AspNetCore.Extensions;
 using Servly.Idempotency.AspNetCore.Middleware;
 using Shouldly;
 using Xunit;
