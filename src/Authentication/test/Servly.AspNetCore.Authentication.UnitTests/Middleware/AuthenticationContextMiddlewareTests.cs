@@ -2,11 +2,12 @@
 using Microsoft.AspNetCore.Http;
 using Microsoft.Extensions.Logging.Abstractions;
 using Moq;
-using Servly.Authentication.AspNetCore.Middleware;
+using Servly.AspNetCore.Authentication.Middleware;
+using Servly.Authentication;
 using Shouldly;
 using Xunit;
 
-namespace Servly.Authentication.AspNetCore.UnitTests.Middleware;
+namespace Servly.AspNetCore.Authentication.UnitTests.Middleware;
 
 public class AuthenticationContextMiddlewareTests
 {

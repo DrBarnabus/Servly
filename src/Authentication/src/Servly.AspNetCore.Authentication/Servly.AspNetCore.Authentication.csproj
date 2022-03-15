@@ -3,7 +3,7 @@
     <PropertyGroup>
         <TargetFramework>net6.0</TargetFramework>
 
-        <PackageId>Servly.Authentication.AspNetCore</PackageId>
+        <PackageId>Servly.AspNetCore.Authentication</PackageId>
         <PackageTags>Servly;AspNetCore;Authentication;Claims Principal;Authentication Context;</PackageTags>
         <Description>
             Contextual Authentication and Claims Principal handling extensions for a Servly Application running on AspNetCore.

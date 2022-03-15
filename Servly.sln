@@ -25,9 +25,9 @@ Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "test", "test", "{330A8670-F
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Servly.Authentication.UnitTests", "src\Authentication\test\Servly.Authentication.UnitTests\Servly.Authentication.UnitTests.csproj", "{247D4988-E4D2-4F79-A62E-8D40AD4D42AD}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Servly.Authentication.AspNetCore", "src\Authentication\src\Servly.Authentication.AspNetCore\Servly.Authentication.AspNetCore.csproj", "{54C522A6-768A-42F8-A4DA-74B25B370850}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Servly.AspNetCore.Authentication", "src\Authentication\src\Servly.AspNetCore.Authentication\Servly.AspNetCore.Authentication.csproj", "{54C522A6-768A-42F8-A4DA-74B25B370850}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Servly.Authentication.AspNetCore.UnitTests", "src\Authentication\test\Servly.Authentication.AspNetCore.UnitTests\Servly.Authentication.AspNetCore.UnitTests.csproj", "{30433C7B-7EB0-44D1-B30F-B1219FB3967B}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Servly.AspNetCore.Authentication.UnitTests", "src\Authentication\test\Servly.AspNetCore.Authentication.UnitTests\Servly.AspNetCore.Authentication.UnitTests.csproj", "{30433C7B-7EB0-44D1-B30F-B1219FB3967B}"
 EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Persistence.Redis", "Persistence.Redis", "{2DFC55A4-977A-427E-BD66-4DDAF4728443}"
 EndProject

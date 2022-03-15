@@ -1,6 +1,6 @@
 ﻿using Microsoft.AspNetCore.Builder;
+using Servly.AspNetCore.Authentication.Middleware;
 using Servly.Authentication;
-using Servly.Authentication.AspNetCore.Middleware;
 
 // ReSharper disable once CheckNamespace
 namespace Servly.Extensions;

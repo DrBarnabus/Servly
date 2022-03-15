@@ -1,9 +1,10 @@
 ﻿using Microsoft.AspNetCore.Http;
 using Microsoft.Extensions.DependencyInjection;
 using Microsoft.Extensions.Logging;
+using Servly.Authentication;
 using Servly.Core;
 
-namespace Servly.Authentication.AspNetCore.Middleware;
+namespace Servly.AspNetCore.Authentication.Middleware;
 
 public class AuthenticationContextMiddleware<TState> : IMiddleware
     where TState : class, IAuthenticationContextState, new()

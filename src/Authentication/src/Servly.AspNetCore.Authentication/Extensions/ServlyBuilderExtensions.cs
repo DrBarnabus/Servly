@@ -1,8 +1,8 @@
 ﻿using Microsoft.AspNetCore.Http;
 using Microsoft.Extensions.DependencyInjection;
 using Microsoft.Extensions.Logging;
+using Servly.AspNetCore.Authentication.Middleware;
 using Servly.Authentication;
-using Servly.Authentication.AspNetCore.Middleware;
 using Servly.Core;
 
 // ReSharper disable once CheckNamespace

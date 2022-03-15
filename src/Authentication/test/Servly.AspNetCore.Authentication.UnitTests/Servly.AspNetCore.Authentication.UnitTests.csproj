@@ -23,7 +23,7 @@
     </ItemGroup>
 
     <ItemGroup>
-      <ProjectReference Include="..\..\src\Servly.Authentication.AspNetCore\Servly.Authentication.AspNetCore.csproj" />
+      <ProjectReference Include="..\..\src\Servly.AspNetCore.Authentication\Servly.AspNetCore.Authentication.csproj" />
     </ItemGroup>
 
 </Project>
