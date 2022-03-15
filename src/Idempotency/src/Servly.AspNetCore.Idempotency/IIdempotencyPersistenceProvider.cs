@@ -1,4 +1,4 @@
-﻿namespace Servly.Idempotency.AspNetCore;
+﻿namespace Servly.AspNetCore.Idempotency;
 
 public interface IIdempotencyPersistenceProvider
 {

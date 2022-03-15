@@ -5,9 +5,9 @@ using Microsoft.AspNetCore.Http;
 using Microsoft.AspNetCore.Http.Extensions;
 using Microsoft.AspNetCore.Mvc.Infrastructure;
 using Microsoft.Extensions.Logging;
-using Servly.Idempotency.AspNetCore.Attributes;
+using Servly.AspNetCore.Idempotency.Attributes;
 
-namespace Servly.Idempotency.AspNetCore.Middleware;
+namespace Servly.AspNetCore.Idempotency.Middleware;
 
 public class IdempotencyMiddleware : IMiddleware
 {

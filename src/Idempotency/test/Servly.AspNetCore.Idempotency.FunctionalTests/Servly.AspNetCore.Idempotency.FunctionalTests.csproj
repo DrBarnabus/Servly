@@ -24,7 +24,7 @@
     </ItemGroup>
 
     <ItemGroup>
-      <ProjectReference Include="..\..\src\Servly.Idempotency.AspNetCore\Servly.Idempotency.AspNetCore.csproj" />
+      <ProjectReference Include="..\..\src\Servly.AspNetCore.Idempotency\Servly.AspNetCore.Idempotency.csproj" />
     </ItemGroup>
 
 </Project>

@@ -9,12 +9,12 @@ using Microsoft.Extensions.DependencyInjection;
 using Microsoft.Extensions.Hosting;
 using Microsoft.Extensions.Primitives;
 using Servly.Extensions;
-using Servly.Idempotency.AspNetCore.Attributes;
-using Servly.Idempotency.AspNetCore.Middleware;
+using Servly.AspNetCore.Idempotency.Attributes;
+using Servly.AspNetCore.Idempotency.Middleware;
 using Shouldly;
 using Xunit;
 
-namespace Servly.Idempotency.AspNetCore.FunctionalTests.Middleware;
+namespace Servly.AspNetCore.Idempotency.FunctionalTests.Middleware;
 
 public class IdempotencyMiddlewareTests
 {

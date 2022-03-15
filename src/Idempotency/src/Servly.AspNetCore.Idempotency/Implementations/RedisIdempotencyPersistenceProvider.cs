@@ -2,7 +2,7 @@
 using System.Text.Json;
 using Servly.Persistence.Redis;
 
-namespace Servly.Idempotency.AspNetCore.Implementations;
+namespace Servly.AspNetCore.Idempotency.Implementations;
 
 public class RedisIdempotencyPersistenceProvider : IIdempotencyPersistenceProvider
 {

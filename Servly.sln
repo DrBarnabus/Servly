@@ -39,11 +39,11 @@ Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Idempotency", "Idempotency"
 EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "src", "src", "{F00E7D6B-7C43-4C03-B75C-38F702DFB3AC}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Servly.Idempotency.AspNetCore", "src\Idempotency\src\Servly.Idempotency.AspNetCore\Servly.Idempotency.AspNetCore.csproj", "{0B8A0EBC-1A5A-4B0A-8DD4-D9D57A2A18D8}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Servly.AspNetCore.Idempotency", "src\Idempotency\src\Servly.AspNetCore.Idempotency\Servly.AspNetCore.Idempotency.csproj", "{0B8A0EBC-1A5A-4B0A-8DD4-D9D57A2A18D8}"
 EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "test", "test", "{D2947823-19D6-4114-AF58-DCA5B192245E}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Servly.Idempotency.AspNetCore.FunctionalTests", "src\Idempotency\test\Servly.Idempotency.AspNetCore.FunctionalTests\Servly.Idempotency.AspNetCore.FunctionalTests.csproj", "{2E4F4E33-800C-40D9-9580-C4CB049EDFDF}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Servly.AspNetCore.Idempotency.FunctionalTests", "src\Idempotency\test\Servly.AspNetCore.Idempotency.FunctionalTests\Servly.AspNetCore.Idempotency.FunctionalTests.csproj", "{2E4F4E33-800C-40D9-9580-C4CB049EDFDF}"
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Servly.AspNetCore.Core", "src\Core\src\Servly.AspNetCore.Core\Servly.AspNetCore.Core.csproj", "{A9E7371D-A039-4FF1-B407-CB8137E0C727}"
 EndProject

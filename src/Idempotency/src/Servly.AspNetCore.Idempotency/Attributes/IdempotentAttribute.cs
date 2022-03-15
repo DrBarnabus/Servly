@@ -1,4 +1,4 @@
-﻿namespace Servly.Idempotency.AspNetCore.Attributes;
+﻿namespace Servly.AspNetCore.Idempotency.Attributes;
 
 [AttributeUsage(AttributeTargets.Class | AttributeTargets.Method, Inherited = false)]
 public class IdempotentAttribute : Attribute
