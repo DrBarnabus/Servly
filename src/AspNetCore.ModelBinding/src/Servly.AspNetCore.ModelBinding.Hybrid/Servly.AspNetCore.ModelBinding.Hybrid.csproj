@@ -1,0 +1,17 @@
+<Project Sdk="Microsoft.NET.Sdk">
+
+    <PropertyGroup>
+        <TargetFramework>net6.0</TargetFramework>
+
+        <PackageId>Servly.AspNetCore.ModelBinding.Hybrid</PackageId>
+        <PackageTags>Servly;AspNetCore;Model Binding;Hybrid;Route;Body;Query</PackageTags>
+        <Description>
+            AspNetCore Hybrid Model binding from Body, Route and Query String to a single model.
+        </Description>
+    </PropertyGroup>
+
+    <ItemGroup>
+      <ProjectReference Include="..\..\..\Core\src\Servly.Core.AspNetCore\Servly.Core.AspNetCore.csproj" />
+    </ItemGroup>
+
+</Project>

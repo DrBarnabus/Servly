@@ -30,6 +30,7 @@ public sealed class PackageNuget : FrostingTask<BuildContext>
         string[] projectPaths = {
             "./src/Core/src/Servly.Core",
             "./src/Core/src/Servly.Core.AspNetCore",
+            "./src/AspNetCore.ModelBinding/src/Servly.AspNetCore.ModelBinding.Hybrid",
             "./src/Authentication/src/Servly.Authentication",
             "./src/Authentication/src/Servly.Authentication.AspNetCore",
             "./src/Idempotency/src/Servly.Idempotency.AspNetCore"

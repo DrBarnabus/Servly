@@ -47,6 +47,18 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Servly.Idempotency.AspNetCo
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Servly.Core.AspNetCore", "src\Core\src\Servly.Core.AspNetCore\Servly.Core.AspNetCore.csproj", "{A9E7371D-A039-4FF1-B407-CB8137E0C727}"
 EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "AspNetCore.ModelBinding", "AspNetCore.ModelBinding", "{0BBB789E-4FB3-4C20-97D5-C7D3C30D03A0}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "src", "src", "{63231236-45E5-40CD-8F38-4C9C888E0C87}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Servly.AspNetCore.ModelBinding.Hybrid", "src\AspNetCore.ModelBinding\src\Servly.AspNetCore.ModelBinding.Hybrid\Servly.AspNetCore.ModelBinding.Hybrid.csproj", "{34F41A6A-D9FE-42AC-8AAA-57F42A706AE5}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "test", "test", "{27140471-91C4-406D-8E31-DA0351E8BE83}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Servly.AspNetCore.ModelBinding.Hybrid.UnitTests", "src\AspNetCore.ModelBinding\test\Servly.AspNetCore.ModelBinding.Hybrid.UnitTests\Servly.AspNetCore.ModelBinding.Hybrid.UnitTests.csproj", "{7B5AD495-A25B-4F6D-9164-1B13A85C7018}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Servly.AspNetCore.ModelBinding.Hybrid.FunctionalTests", "src\AspNetCore.ModelBinding\test\Servly.AspNetCore.ModelBinding.Hybrid.FunctionalTests\Servly.AspNetCore.ModelBinding.Hybrid.FunctionalTests.csproj", "{972521DC-3428-4C77-B9E2-F68A1DFCC5D8}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -74,6 +86,12 @@ Global
 		{D2947823-19D6-4114-AF58-DCA5B192245E} = {DFAAB603-0919-474D-9577-30F81EC4EDEE}
 		{2E4F4E33-800C-40D9-9580-C4CB049EDFDF} = {D2947823-19D6-4114-AF58-DCA5B192245E}
 		{A9E7371D-A039-4FF1-B407-CB8137E0C727} = {80C64D86-BC92-4478-8B22-5A3EA95AACF8}
+		{0BBB789E-4FB3-4C20-97D5-C7D3C30D03A0} = {5CCB10AB-4856-4564-94CE-CEA117E174B9}
+		{63231236-45E5-40CD-8F38-4C9C888E0C87} = {0BBB789E-4FB3-4C20-97D5-C7D3C30D03A0}
+		{34F41A6A-D9FE-42AC-8AAA-57F42A706AE5} = {63231236-45E5-40CD-8F38-4C9C888E0C87}
+		{27140471-91C4-406D-8E31-DA0351E8BE83} = {0BBB789E-4FB3-4C20-97D5-C7D3C30D03A0}
+		{7B5AD495-A25B-4F6D-9164-1B13A85C7018} = {27140471-91C4-406D-8E31-DA0351E8BE83}
+		{972521DC-3428-4C77-B9E2-F68A1DFCC5D8} = {27140471-91C4-406D-8E31-DA0351E8BE83}
 	EndGlobalSection
 	GlobalSection(ProjectConfigurationPlatforms) = postSolution
 		{4932FB70-6F08-4A88-9770-EDC678DAFC66}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
@@ -116,5 +134,17 @@ Global
 		{A9E7371D-A039-4FF1-B407-CB8137E0C727}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{A9E7371D-A039-4FF1-B407-CB8137E0C727}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{A9E7371D-A039-4FF1-B407-CB8137E0C727}.Release|Any CPU.Build.0 = Release|Any CPU
+		{34F41A6A-D9FE-42AC-8AAA-57F42A706AE5}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{34F41A6A-D9FE-42AC-8AAA-57F42A706AE5}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{34F41A6A-D9FE-42AC-8AAA-57F42A706AE5}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{34F41A6A-D9FE-42AC-8AAA-57F42A706AE5}.Release|Any CPU.Build.0 = Release|Any CPU
+		{7B5AD495-A25B-4F6D-9164-1B13A85C7018}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{7B5AD495-A25B-4F6D-9164-1B13A85C7018}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{7B5AD495-A25B-4F6D-9164-1B13A85C7018}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{7B5AD495-A25B-4F6D-9164-1B13A85C7018}.Release|Any CPU.Build.0 = Release|Any CPU
+		{972521DC-3428-4C77-B9E2-F68A1DFCC5D8}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{972521DC-3428-4C77-B9E2-F68A1DFCC5D8}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{972521DC-3428-4C77-B9E2-F68A1DFCC5D8}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{972521DC-3428-4C77-B9E2-F68A1DFCC5D8}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 EndGlobal
