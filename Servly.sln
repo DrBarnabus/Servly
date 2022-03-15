@@ -35,15 +35,15 @@ Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "src", "src", "{E1F56FC5-13B
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Servly.Persistence.Redis", "src\Persistence.Redis\src\Servly.Persistence.Redis\Servly.Persistence.Redis.csproj", "{FF855140-AAE9-4F4B-A0C1-54D8A57DDFF2}"
 EndProject
-Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Idempotency", "Idempotency", "{DFAAB603-0919-474D-9577-30F81EC4EDEE}"
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "AspNetCore.Idempotency", "AspNetCore.Idempotency", "{DFAAB603-0919-474D-9577-30F81EC4EDEE}"
 EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "src", "src", "{F00E7D6B-7C43-4C03-B75C-38F702DFB3AC}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Servly.AspNetCore.Idempotency", "src\Idempotency\src\Servly.AspNetCore.Idempotency\Servly.AspNetCore.Idempotency.csproj", "{0B8A0EBC-1A5A-4B0A-8DD4-D9D57A2A18D8}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Servly.AspNetCore.Idempotency", "src\AspNetCore.Idempotency\src\Servly.AspNetCore.Idempotency\Servly.AspNetCore.Idempotency.csproj", "{0B8A0EBC-1A5A-4B0A-8DD4-D9D57A2A18D8}"
 EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "test", "test", "{D2947823-19D6-4114-AF58-DCA5B192245E}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Servly.AspNetCore.Idempotency.FunctionalTests", "src\Idempotency\test\Servly.AspNetCore.Idempotency.FunctionalTests\Servly.AspNetCore.Idempotency.FunctionalTests.csproj", "{2E4F4E33-800C-40D9-9580-C4CB049EDFDF}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Servly.AspNetCore.Idempotency.FunctionalTests", "src\AspNetCore.Idempotency\test\Servly.AspNetCore.Idempotency.FunctionalTests\Servly.AspNetCore.Idempotency.FunctionalTests.csproj", "{2E4F4E33-800C-40D9-9580-C4CB049EDFDF}"
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Servly.AspNetCore.Core", "src\Core\src\Servly.AspNetCore.Core\Servly.AspNetCore.Core.csproj", "{A9E7371D-A039-4FF1-B407-CB8137E0C727}"
 EndProject
