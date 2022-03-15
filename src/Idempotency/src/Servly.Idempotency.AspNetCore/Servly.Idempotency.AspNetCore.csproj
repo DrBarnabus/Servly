@@ -4,7 +4,10 @@
         <TargetFramework>net6.0</TargetFramework>
 
         <PackageId>Servly.Idempotency.AspNetCore</PackageId>
-        <PackageTags>Servly;AspNetCore;Idempotency;Middleware;</PackageTags>
+        <PackageTags>Servly;AspNetCore;Idempotency;Idempotent;Handling;Middleware;</PackageTags>
+        <Description>
+            AspNetCore Middleware for handling Idempotent request requirements for HTTP Requests.
+        </Description>
     </PropertyGroup>
 
     <ItemGroup>
