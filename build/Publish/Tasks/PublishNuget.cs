@@ -28,12 +28,15 @@ public sealed class PublishNugetInternal : FrostingTask<BuildContext>
 
     public override void Run(BuildContext context)
     {
-        // publish to nuget.org
-        string? nugetApiKey = context.Credentials?.Nuget?.ApiKey;
-        if (string.IsNullOrEmpty(nugetApiKey))
-            throw new InvalidOperationException("Could not resolve NuGet org API key.");
+        // publish to nuget.org for tagged stable releases only
+        if (context.IsStableRelease)
+        {
+            string? nugetApiKey = context.Credentials?.Nuget?.ApiKey;
+            if (string.IsNullOrEmpty(nugetApiKey))
+                throw new InvalidOperationException("Could not resolve NuGet org API key.");
 
-        PublishToNugetRepo(context, nugetApiKey, Constants.NugetOrgUrl);
+            PublishToNugetRepo(context, nugetApiKey, Constants.NugetOrgUrl);
+        }
 
         // publish to github packages for commits on main and on original repo
         if (context.IsGitHubActionsBuild && context.IsOnMainBranchOriginalRepo)
