@@ -3,7 +3,7 @@
     <PropertyGroup>
         <TargetFramework>net6.0</TargetFramework>
 
-        <PackageId>Servly.Core.AspNetCore</PackageId>
+        <PackageId>Servly.AspNetCore.Core</PackageId>
         <PackageTags>Servly;AspNetCore</PackageTags>
         <Description>
             The base package for a Servly Application running on AspNetCore including base types needed for other packages/modules.

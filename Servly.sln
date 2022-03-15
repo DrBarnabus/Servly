@@ -45,7 +45,7 @@ Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "test", "test", "{D2947823-1
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Servly.Idempotency.AspNetCore.FunctionalTests", "src\Idempotency\test\Servly.Idempotency.AspNetCore.FunctionalTests\Servly.Idempotency.AspNetCore.FunctionalTests.csproj", "{2E4F4E33-800C-40D9-9580-C4CB049EDFDF}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Servly.Core.AspNetCore", "src\Core\src\Servly.Core.AspNetCore\Servly.Core.AspNetCore.csproj", "{A9E7371D-A039-4FF1-B407-CB8137E0C727}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Servly.AspNetCore.Core", "src\Core\src\Servly.AspNetCore.Core\Servly.AspNetCore.Core.csproj", "{A9E7371D-A039-4FF1-B407-CB8137E0C727}"
 EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "AspNetCore.ModelBinding", "AspNetCore.ModelBinding", "{0BBB789E-4FB3-4C20-97D5-C7D3C30D03A0}"
 EndProject
