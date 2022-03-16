@@ -18,6 +18,7 @@
         <PackageProjectUrl>https://github.com/DrBarnabus/Servly</PackageProjectUrl>
         <PackageRequiresLicenseAcceptance>false</PackageRequiresLicenseAcceptance>
         <PackageLicenseExpression>MIT</PackageLicenseExpression>
+        <PackageReadmeFile>README.md</PackageReadmeFile>
 
         <RepositoryUrl>https://github.com/DrBarnabus/Servly.git</RepositoryUrl>
         <RepositoryType>git</RepositoryType>
@@ -31,6 +32,10 @@
 
     <ItemGroup>
         <PackageReference Include="Microsoft.SourceLink.GitHub" Version="1.1.1" PrivateAssets="All" />
+    </ItemGroup>
+
+    <ItemGroup>
+        <None Include="$(SolutionDir)/README.md" Pack="true" PackagePath="/" />
     </ItemGroup>
 
 </Project>

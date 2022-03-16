@@ -1,22 +1,16 @@
-<h1 align="center">Servly</h1>
+# Servly
+#### Microservices and Multi-tenancy on .NET made simple
 
-<div align="center">
-    <strong>Microservices and Multitenancy on .NET made simple</strong>
-</div>
+### [Project Goals](#goals-for-mvp) | [Getting Started](#getting-started) | [License](#license)
 
-<div align="center">
-    <h3>
-        <a href="#goals-for-mvp">Project Goals</a>
-        <span> | </span>
-        <a href="#getting-started">Getting Started</a>
-        <span> | </span>
-        <a href="#license">License</a>
-    </h3>
-</div>
+[![GitHub Release][github-release-badge]][github-release]
+[![NuGet Downloads][nuget-downloads-badge]][nuget-downloads]
+[![Build Status][gh-actions-badge]][gh-actions]
+[![Codecov][codecov-badge]][codecov]
 
 ---
 
-Servly is an in development open-source and cross-platform framework to assist building modern cloud-native microservices on the [.NET](https://dot.net) platform.
+**Servly** is an in development open-source and cross-platform framework to assist building modern cloud-native microservices on the [.NET](https://dot.net) platform.
 
 It consist of a number of configurable and mixable modules to give you flexibility while constructing your microservices including support for [multi-tenancy](https://en.wikipedia.org/wiki/Multitenancy) scenarios.
 
@@ -53,10 +47,19 @@ The goals for this project are still in flux, currently the following is being t
 
 # Getting Started
 
-> Coming Soon
+> Documentation Coming Soon
 
 # License
 
 Licensed under [MIT](./LICENSE)
 
 Copyright (c) 2022 DrBarnabus
+
+[github-release-badge]:     https://img.shields.io/github/v/release/DrBarnabus/Servly?color=g&style=for-the-badge
+[github-release]:           https://github.com/DrBarnabus/Servly/releases/latest
+[nuget-downloads-badge]:    https://img.shields.io/nuget/dt/Servly.Core?color=g&logo=nuget&style=for-the-badge
+[nuget-downloads]:          https://www.nuget.org/packages/Servly.Core
+[gh-actions-badge]:         https://img.shields.io/github/workflow/status/DrBarnabus/Servly/CI/main?logo=github&style=for-the-badge
+[gh-actions]:               https://github.com/DrBarnabus/Servly/actions/workflows/ci.yml
+[codecov-badge]:            https://img.shields.io/codecov/c/github/DrBarnabus/Servly/main?logo=codecov&logoColor=fff&style=for-the-badge
+[codecov]:                  https://codecov.io/gh/DrBarnabus/Servly/branch/main
