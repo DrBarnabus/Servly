@@ -14,13 +14,22 @@ public static class ServlyHost
         var builder = new ServlyHostBuilder();
 
         return builder
-            .UseContentRoot(Directory.GetCurrentDirectory())
-            .ConfigureHostConfiguration(config =>
-            {
-                config.AddEnvironmentVariables("DOTNET_");
-                if (args is not null)
-                    config.AddCommandLine(args);
-            })
+            .ConfigureInternalHost(hostBuilder => hostBuilder
+                .UseContentRoot(Directory.GetCurrentDirectory())
+                .ConfigureHostConfiguration(config =>
+                {
+                    config.AddEnvironmentVariables("DOTNET_");
+                    if (args is not null)
+                        config.AddCommandLine(args);
+                })
+                .ConfigureLogging(logging => logging.ClearProviders())
+                .UseDefaultServiceProvider((context, options) =>
+                {
+                    bool isLocal = context.HostingEnvironment.IsLocal();
+                    options.ValidateScopes = isLocal;
+                    options.ValidateOnBuild = isLocal;
+                })
+            )
             .ConfigureAppConfiguration((hostingContext, config) =>
             {
                 var env = hostingContext.HostingEnvironment;
@@ -40,13 +49,6 @@ public static class ServlyHost
 
                 if (args is not null)
                     config.AddCommandLine(args);
-            })
-            .ConfigureLogging(logging => logging.ClearProviders())
-            .UseDefaultServiceProvider((context, options) =>
-            {
-                bool isLocal = context.HostingEnvironment.IsLocal();
-                options.ValidateScopes = isLocal;
-                options.ValidateOnBuild = isLocal;
-            }) as IServlyHostBuilder ?? throw new InvalidOperationException();
+            });
     }
 }

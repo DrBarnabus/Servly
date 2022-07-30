@@ -11,6 +11,7 @@ namespace Servly.Hosting.Internal;
 
 public class ServlyHostBuilder : IServlyHostBuilder
 {
+    private readonly ServlyBaseHostBuilder _internalBuilder;
     private readonly List<Action<IConfigurationBuilder>> _configureHostConfigurationActions = new();
     private readonly List<Action<HostBuilderContext, IConfigurationBuilder>> _configureAppConfigurationActions = new();
     private readonly List<Action<HostBuilderContext, IServiceCollection>> _configureServicesActions = new();
@@ -26,57 +27,48 @@ public class ServlyHostBuilder : IServlyHostBuilder
 
     private IServiceFactoryAdapter _serviceProviderFactory = new ServiceFactoryAdapter<IServiceCollection>(new DefaultServiceProviderFactory());
 
-    /// <inheritdoc />
-    public IDictionary<object, object> Properties { get; } = new Dictionary<object, object>();
+    public ServlyHostBuilder()
+    {
+        _internalBuilder = new ServlyBaseHostBuilder(this);
+    }
 
     /// <inheritdoc />
-    public IHostBuilder ConfigureHostConfiguration(Action<IConfigurationBuilder> configureDelegate)
+    public IServlyHostBuilder ConfigureAppConfiguration(Action<HostBuilderContext, IConfigurationBuilder> configureDelegate)
     {
-        _configureHostConfigurationActions.Add(configureDelegate ?? throw new ArgumentNullException(nameof(configureDelegate)));
+        Guard.Assert(configureDelegate is not null, $"{nameof(configureDelegate)} cannot be null.");
+
+        _internalBuilder.ConfigureAppConfiguration(configureDelegate);
         return this;
     }
 
     /// <inheritdoc />
-    public IHostBuilder ConfigureAppConfiguration(Action<HostBuilderContext, IConfigurationBuilder> configureDelegate)
+    public IServlyHostBuilder ConfigureServices(Action<HostBuilderContext, IServiceCollection> configureDelegate)
     {
-        _configureAppConfigurationActions.Add(configureDelegate ?? throw new ArgumentNullException(nameof(configureDelegate)));
+        Guard.Assert(configureDelegate is not null, $"{nameof(configureDelegate)} cannot be null.");
+
+        _internalBuilder.ConfigureServices(configureDelegate);
         return this;
     }
 
     /// <inheritdoc />
-    public IHostBuilder ConfigureServices(Action<HostBuilderContext, IServiceCollection> configureDelegate)
+    public IServlyHostBuilder ConfigureModules(Action<HostBuilderContext, IServlyBuilder> configureDelegate)
     {
-        _configureServicesActions.Add(configureDelegate ?? throw new ArgumentNullException(nameof(configureDelegate)));
+        Guard.Assert(configureDelegate is not null, $"{nameof(configureDelegate)} cannot be null.");
+
+        _configureServlyAction = configureDelegate;
+        return this;
+    }
+
+    public IServlyHostBuilder ConfigureInternalHost(Action<IHostBuilder> configureDelegate)
+    {
+        Guard.Assert(configureDelegate is not null, $"{nameof(configureDelegate)} cannot be null.");
+
+        configureDelegate(_internalBuilder);
         return this;
     }
 
     /// <inheritdoc />
-    public IHostBuilder UseServiceProviderFactory<TContainerBuilder>(IServiceProviderFactory<TContainerBuilder> factory)
-        where TContainerBuilder : notnull
-    {
-        _serviceProviderFactory = new ServiceFactoryAdapter<TContainerBuilder>(factory ?? throw new ArgumentNullException(nameof(factory)));
-        return this;
-    }
-
-    /// <inheritdoc />
-    public IHostBuilder UseServiceProviderFactory<TContainerBuilder>(Func<HostBuilderContext, IServiceProviderFactory<TContainerBuilder>> factory)
-        where TContainerBuilder : notnull
-    {
-        _serviceProviderFactory = new ServiceFactoryAdapter<TContainerBuilder>(() => _hostBuilderContext!,
-            factory ?? throw new ArgumentNullException(nameof(factory)));
-        return this;
-    }
-
-    /// <inheritdoc />
-    public IHostBuilder ConfigureContainer<TContainerBuilder>(Action<HostBuilderContext, TContainerBuilder> configureDelegate)
-    {
-        _configureContainerActions.Add(new ConfigureContainerAdapter<TContainerBuilder>(configureDelegate
-            ?? throw new ArgumentNullException(nameof(configureDelegate))));
-        return this;
-    }
-
-    /// <inheritdoc />
-    public IHost Build()
+    public IServlyHost Build()
     {
         if (_hostBuilt)
             throw new InvalidOperationException("Build can only be called once.");
@@ -89,20 +81,7 @@ public class ServlyHostBuilder : IServlyHostBuilder
         BuildAppConfiguration();
 
         var appServices = CreateServiceProvider();
-        return appServices.GetRequiredService<IHost>();
-    }
-
-    /// <inheritdoc />
-    public IServlyHostBuilder ConfigureModules(Action<IServlyBuilder> configureServly)
-    {
-        return ConfigureModules((_, servlyBuilder) => configureServly(servlyBuilder));
-    }
-
-    /// <inheritdoc />
-    public IServlyHostBuilder ConfigureModules(Action<HostBuilderContext, IServlyBuilder> configureServly)
-    {
-        _configureServlyAction = configureServly ?? throw new ArgumentNullException(nameof(configureServly));
-        return this;
+        return (IServlyHost)appServices.GetRequiredService<IHost>();
     }
 
     private void BuildHostConfiguration()
@@ -140,7 +119,7 @@ public class ServlyHostBuilder : IServlyHostBuilder
 
     private void CreateHostBuilderContext()
     {
-        _hostBuilderContext = new HostBuilderContext(Properties)
+        _hostBuilderContext = new HostBuilderContext(_internalBuilder.Properties)
         {
             HostingEnvironment = _hostingEnvironment,
             Configuration = _hostConfiguration
@@ -195,5 +174,70 @@ public class ServlyHostBuilder : IServlyHostBuilder
         _ = appServices.GetService<IConfiguration>();
 
         return appServices;
+    }
+
+    private class ServlyBaseHostBuilder : IHostBuilder
+    {
+        private readonly ServlyHostBuilder _parent;
+
+        public ServlyBaseHostBuilder(ServlyHostBuilder parent)
+        {
+            _parent = parent;
+        }
+
+        /// <inheritdoc />
+        public IDictionary<object, object> Properties { get; } = new Dictionary<object, object>();
+
+        /// <inheritdoc />
+        public IHostBuilder ConfigureHostConfiguration(Action<IConfigurationBuilder> configureDelegate)
+        {
+            _parent._configureHostConfigurationActions.Add(configureDelegate ?? throw new ArgumentNullException(nameof(configureDelegate)));
+            return this;
+        }
+
+        /// <inheritdoc />
+        public IHostBuilder ConfigureAppConfiguration(Action<HostBuilderContext, IConfigurationBuilder> configureDelegate)
+        {
+            _parent._configureAppConfigurationActions.Add(configureDelegate ?? throw new ArgumentNullException(nameof(configureDelegate)));
+            return this;
+        }
+
+        /// <inheritdoc />
+        public IHostBuilder ConfigureServices(Action<HostBuilderContext, IServiceCollection> configureDelegate)
+        {
+            _parent._configureServicesActions.Add(configureDelegate ?? throw new ArgumentNullException(nameof(configureDelegate)));
+            return this;
+        }
+
+        /// <inheritdoc />
+        public IHostBuilder UseServiceProviderFactory<TContainerBuilder>(IServiceProviderFactory<TContainerBuilder> factory)
+            where TContainerBuilder : notnull
+        {
+            _parent._serviceProviderFactory = new ServiceFactoryAdapter<TContainerBuilder>(factory ?? throw new ArgumentNullException(nameof(factory)));
+            return this;
+        }
+
+        /// <inheritdoc />
+        public IHostBuilder UseServiceProviderFactory<TContainerBuilder>(Func<HostBuilderContext, IServiceProviderFactory<TContainerBuilder>> factory)
+            where TContainerBuilder : notnull
+        {
+            _parent._serviceProviderFactory = new ServiceFactoryAdapter<TContainerBuilder>(() => _parent._hostBuilderContext!,
+                factory ?? throw new ArgumentNullException(nameof(factory)));
+            return this;
+        }
+
+        /// <inheritdoc />
+        public IHostBuilder ConfigureContainer<TContainerBuilder>(Action<HostBuilderContext, TContainerBuilder> configureDelegate)
+        {
+            _parent._configureContainerActions.Add(new ConfigureContainerAdapter<TContainerBuilder>(configureDelegate
+                ?? throw new ArgumentNullException(nameof(configureDelegate))));
+            return this;
+        }
+
+        /// <inheritdoc />
+        public IHost Build()
+        {
+            throw new NotSupportedException($"Host should be built using the parent {nameof(ServlyHostBuilder)}");
+        }
     }
 }
