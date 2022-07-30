@@ -1,8 +1,6 @@
 using Servly.Extensions;
 using Servly.Hosting;
 
-// Host.CreateDefaultBuilder().Build().RunAsync();
-
 var hostBuilder = ServlyHost.CreateDefaultBuilder(args)
     .ConfigureInternalHost(internalBuilder => internalBuilder
         .ConfigureLogging(builder =>

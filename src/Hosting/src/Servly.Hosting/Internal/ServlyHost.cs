@@ -123,7 +123,7 @@ internal class ServlyHost : IServlyHost
         token.Register(state => ((IHostApplicationLifetime?)state)?.StopApplication(), applicationLifetime);
 
         var waitForStop = new TaskCompletionSource<object?>(TaskCreationOptions.RunContinuationsAsynchronously);
-        applicationLifetime?.ApplicationStopped.Register(state =>
+        applicationLifetime?.ApplicationStopping.Register(state =>
             ((TaskCompletionSource<object?>?) state)?.TrySetResult(null), waitForStop);
 
         await waitForStop.Task.ConfigureAwait(false);
