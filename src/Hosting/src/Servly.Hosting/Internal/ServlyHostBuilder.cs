@@ -4,6 +4,8 @@ using Microsoft.Extensions.DependencyInjection;
 using Microsoft.Extensions.FileProviders;
 using Microsoft.Extensions.Hosting;
 using Microsoft.Extensions.Hosting.Internal;
+using Servly.Core;
+using Servly.Extensions;
 
 namespace Servly.Hosting.Internal;
 
@@ -13,6 +15,8 @@ public class ServlyHostBuilder : IServlyHostBuilder
     private readonly List<Action<HostBuilderContext, IConfigurationBuilder>> _configureAppConfigurationActions = new();
     private readonly List<Action<HostBuilderContext, IServiceCollection>> _configureServicesActions = new();
     private readonly List<IConfigureContainerAdapter> _configureContainerActions = new();
+
+    private Action<HostBuilderContext, IServlyBuilder>? _configureServlyAction;
 
     private bool _hostBuilt;
     private HostBuilderContext? _hostBuilderContext;
@@ -83,10 +87,22 @@ public class ServlyHostBuilder : IServlyHostBuilder
         CreateHostingEnvironment();
         CreateHostBuilderContext();
         BuildAppConfiguration();
-        CreateServiceProvider();
 
         var appServices = CreateServiceProvider();
         return appServices.GetRequiredService<IHost>();
+    }
+
+    /// <inheritdoc />
+    public IServlyHostBuilder ConfigureModules(Action<IServlyBuilder> configureServly)
+    {
+        return ConfigureModules((_, servlyBuilder) => configureServly(servlyBuilder));
+    }
+
+    /// <inheritdoc />
+    public IServlyHostBuilder ConfigureModules(Action<HostBuilderContext, IServlyBuilder> configureServly)
+    {
+        _configureServlyAction = configureServly ?? throw new ArgumentNullException(nameof(configureServly));
+        return this;
     }
 
     private void BuildHostConfiguration()
@@ -164,6 +180,9 @@ public class ServlyHostBuilder : IServlyHostBuilder
 
         foreach (var configureServicesAction in _configureServicesActions)
             configureServicesAction(_hostBuilderContext!, services);
+
+        services.AddServly(_hostBuilderContext!.Configuration, servlyBuilder =>
+            _configureServlyAction?.Invoke(_hostBuilderContext, servlyBuilder));
 
         object containerBuilder = _serviceProviderFactory.CreateBuilder(services);
         foreach (var containerAction in _configureContainerActions)
