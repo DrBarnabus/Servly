@@ -82,6 +82,8 @@ Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "sample", "sample", "{17F18D
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Servly.Hosting.AspNetCore.Sample", "src\Hosting\sample\Servly.Hosting.AspNetCore.Sample\Servly.Hosting.AspNetCore.Sample.csproj", "{FAAA57C1-084E-48C0-84B4-78D67905ADAA}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Servly.AspNetCore.Hosting", "src\Hosting\src\Servly.AspNetCore.Hosting\Servly.AspNetCore.Hosting.csproj", "{5D169863-8A45-4B20-A596-6633B5D3AE3A}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -148,6 +150,10 @@ Global
 		{FAAA57C1-084E-48C0-84B4-78D67905ADAA}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{FAAA57C1-084E-48C0-84B4-78D67905ADAA}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{FAAA57C1-084E-48C0-84B4-78D67905ADAA}.Release|Any CPU.Build.0 = Release|Any CPU
+		{5D169863-8A45-4B20-A596-6633B5D3AE3A}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{5D169863-8A45-4B20-A596-6633B5D3AE3A}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{5D169863-8A45-4B20-A596-6633B5D3AE3A}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{5D169863-8A45-4B20-A596-6633B5D3AE3A}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
@@ -185,6 +191,7 @@ Global
 		{DD71BA9D-6C88-453C-899C-AE406DCAD215} = {892A7674-7953-4D7F-847C-343C204FCEC1}
 		{17F18D74-8BD5-49C3-8664-B25D1888CD81} = {666618D7-A0F8-41A1-9647-C56BBBD43B01}
 		{FAAA57C1-084E-48C0-84B4-78D67905ADAA} = {17F18D74-8BD5-49C3-8664-B25D1888CD81}
+		{5D169863-8A45-4B20-A596-6633B5D3AE3A} = {892A7674-7953-4D7F-847C-343C204FCEC1}
 	EndGlobalSection
 	GlobalSection(ExtensibilityGlobals) = postSolution
 		SolutionGuid = {B3C7C43A-F68E-4E2D-948E-9A144BC8D513}

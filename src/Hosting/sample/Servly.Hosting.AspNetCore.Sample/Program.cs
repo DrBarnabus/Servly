@@ -1,26 +1,29 @@
+using Servly.Extensions;
 using Servly.Hosting;
 
+// Host.CreateDefaultBuilder().Build().RunAsync();
+
 var hostBuilder = ServlyHost.CreateDefaultBuilder(args)
+    .ConfigureInternalHost(internalBuilder => internalBuilder
+        .ConfigureLogging(builder =>
+        {
+            builder.AddConsole();
+            builder.SetMinimumLevel(LogLevel.Trace);
+        })
+    )
     .ConfigureServices((_, services) =>
     {
         services
             .AddRouting();
     })
-    .ConfigureInternalHost(internalBuilder => internalBuilder
-        .ConfigureWebHostDefaults(builder =>
-        {
-            builder
-                .Configure(app => app
-                    .UseRouting()
-                    .UseEndpoints(endpoints =>
-                    {
-                        endpoints.MapGet("/", ctx => ctx.Response.WriteAsync("Hello World!"));
-                    }));
-        })
-        .ConfigureLogging(builder =>
-        {
-            builder.AddConsole();
-        })
+    .ConfigureWebHost(builder => builder
+        .Configure(app => app
+            .UseRouting()
+            .UseEndpoints(endpoints =>
+            {
+                endpoints.MapGet("/", ctx => ctx.Response.WriteAsync("Hello World!"));
+            })
+        )
     );
 
 await hostBuilder.Build().RunAsync();

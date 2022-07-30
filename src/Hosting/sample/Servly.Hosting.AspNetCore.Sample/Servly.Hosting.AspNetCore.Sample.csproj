@@ -7,7 +7,7 @@
     </PropertyGroup>
 
     <ItemGroup>
-      <ProjectReference Include="..\..\src\Servly.Hosting\Servly.Hosting.csproj" />
+      <ProjectReference Include="..\..\src\Servly.AspNetCore.Hosting\Servly.AspNetCore.Hosting.csproj" />
     </ItemGroup>
 
 </Project>

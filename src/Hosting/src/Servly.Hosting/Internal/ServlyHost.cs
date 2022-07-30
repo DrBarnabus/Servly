@@ -13,6 +13,7 @@ internal class ServlyHost : IServlyHost
     private readonly IHostLifetime _hostLifetime;
     private readonly HostOptions _options;
     private IEnumerable<IHostedService>? _hostedServices;
+    private volatile bool _stopCalled = false;
 
     public ServlyHost(IServiceProvider services, IHostApplicationLifetime applicationLifetime, ILogger<ServlyHost> logger,
         IHostLifetime hostLifetime, IOptions<HostOptions> options)
@@ -41,8 +42,17 @@ internal class ServlyHost : IServlyHost
         _hostedServices = Services.GetService<IEnumerable<IHostedService>>();
 
         if (_hostedServices is not null)
+        {
             foreach (var hostedService in _hostedServices)
+            {
                 await hostedService.StartAsync(combinedCancellationToken).ConfigureAwait(false);
+
+                if (hostedService is BackgroundService backgroundService)
+                {
+                    _ = TryExecuteBackgroundServiceAsync(backgroundService);
+                }
+            }
+        }
 
         _applicationLifetime.NotifyStarted();
 
@@ -52,6 +62,7 @@ internal class ServlyHost : IServlyHost
     /// <inheritdoc />
     public async Task StopAsync(CancellationToken cancellationToken = default)
     {
+        _stopCalled = true;
         _logger.LogDebug("Host Stopping...");
 
         using var cts = new CancellationTokenSource(_options.ShutdownTimeout);
@@ -149,6 +160,36 @@ internal class ServlyHost : IServlyHost
             case IDisposable disposable:
                 disposable.Dispose();
                 break;
+        }
+    }
+
+    private async Task TryExecuteBackgroundServiceAsync(BackgroundService backgroundService)
+    {
+        var backgroundTask = backgroundService.ExecuteTask;
+        if (backgroundTask == null)
+        {
+            return;
+        }
+
+        try
+        {
+            await backgroundTask.ConfigureAwait(false);
+        }
+        catch (Exception ex)
+        {
+            // When the host is being stopped, it cancels the background services.
+            // This isn't an error condition, so don't log it as an error.
+            if (_stopCalled && backgroundTask.IsCanceled && ex is OperationCanceledException)
+            {
+                return;
+            }
+
+            _logger.LogError(ex, "BackgroundService has faulted");
+            if (_options.BackgroundServiceExceptionBehavior == BackgroundServiceExceptionBehavior.StopHost)
+            {
+                _logger.LogCritical(ex, "Background service exception is stopping host");
+                _applicationLifetime.StopApplication();
+            }
         }
     }
 }

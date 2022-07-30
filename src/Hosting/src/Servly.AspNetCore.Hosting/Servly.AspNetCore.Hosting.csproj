@@ -1,0 +1,21 @@
+<Project Sdk="Microsoft.NET.Sdk">
+
+    <PropertyGroup>
+        <TargetFramework>net6.0</TargetFramework>
+        
+        <PackageId>Servly.AspNetCore.Hosting</PackageId>
+        <PackageTags>Servly;AspNetCore;Hosting;Host;Host Building</PackageTags>
+        <Description>
+            This package contains types that help with application hosting for a Servly application utilizing AspNetCore.
+        </Description>
+    </PropertyGroup>
+
+    <ItemGroup>
+        <FrameworkReference Include="Microsoft.AspNetCore.App" />
+    </ItemGroup>
+
+    <ItemGroup>
+      <ProjectReference Include="..\Servly.Hosting\Servly.Hosting.csproj" />
+    </ItemGroup>
+
+</Project>

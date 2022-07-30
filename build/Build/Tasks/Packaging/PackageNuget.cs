@@ -34,6 +34,7 @@ public sealed class PackageNuget : FrostingTask<BuildContext>
             "./src/Authentication/src/Servly.AspNetCore.Authentication",
             "./src/Core/src/Servly.Core",
             "./src/Core/src/Servly.AspNetCore.Core",
+            "./src/Hosting/src/Servly.AspNetCore.Hosting",
             "./src/Hosting/src/Servly.Hosting",
             "./src/Persistence.Redis/src/Servly.Persistence.Redis"
         };
