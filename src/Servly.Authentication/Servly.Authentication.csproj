@@ -1,0 +1,17 @@
+<Project Sdk="Microsoft.NET.Sdk">
+
+    <PropertyGroup>
+        <TargetFramework>net6.0</TargetFramework>
+
+        <PackageId>Servly.Authentication</PackageId>
+        <PackageTags>Servly;Authentication;Claims Principal;Authentication Context;</PackageTags>
+        <Description>
+            Contextual Authentication and Claims Principal handling extensions for a Servly Application.
+        </Description>
+    </PropertyGroup>
+
+    <ItemGroup>
+      <ProjectReference Include="..\Servly.Core\Servly.Core.csproj" />
+    </ItemGroup>
+
+</Project>

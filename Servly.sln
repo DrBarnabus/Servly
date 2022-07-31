@@ -12,55 +12,55 @@ Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Core", "Core", "{6AF2DFF1-2
 EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "src", "src", "{80C64D86-BC92-4478-8B22-5A3EA95AACF8}"
 EndProject
-Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Servly.Core", "src\Core\src\Servly.Core\Servly.Core.csproj", "{4932FB70-6F08-4A88-9770-EDC678DAFC66}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Servly.Core", "src\Servly.Core\Servly.Core.csproj", "{4932FB70-6F08-4A88-9770-EDC678DAFC66}"
 EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "test", "test", "{7699E96F-902C-43F8-909A-39E3C4A6A021}"
 EndProject
-Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Servly.Core.UnitTests", "src\Core\test\Servly.Core.UnitTests\Servly.Core.UnitTests.csproj", "{E721BEB1-2269-47BD-9890-68E6F0D418A2}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Servly.Core.UnitTests", "src\Servly.Core.UnitTests\Servly.Core.UnitTests.csproj", "{E721BEB1-2269-47BD-9890-68E6F0D418A2}"
 EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Authentication", "Authentication", "{A37C1502-AB78-43CF-B151-3C38E70B1BE5}"
 EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "src", "src", "{D92635DA-9013-4C1D-A6A3-92FD7064DE75}"
 EndProject
-Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Servly.Authentication", "src\Authentication\src\Servly.Authentication\Servly.Authentication.csproj", "{2D8B4224-E7D3-40A6-ACDE-192FCCCF0B44}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Servly.Authentication", "src\Servly.Authentication\Servly.Authentication.csproj", "{2D8B4224-E7D3-40A6-ACDE-192FCCCF0B44}"
 EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "test", "test", "{330A8670-FC70-46A1-B9C3-EA817D486B2E}"
 EndProject
-Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Servly.Authentication.UnitTests", "src\Authentication\test\Servly.Authentication.UnitTests\Servly.Authentication.UnitTests.csproj", "{247D4988-E4D2-4F79-A62E-8D40AD4D42AD}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Servly.Authentication.UnitTests", "src\Servly.Authentication.UnitTests\Servly.Authentication.UnitTests.csproj", "{247D4988-E4D2-4F79-A62E-8D40AD4D42AD}"
 EndProject
-Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Servly.AspNetCore.Authentication", "src\Authentication\src\Servly.AspNetCore.Authentication\Servly.AspNetCore.Authentication.csproj", "{54C522A6-768A-42F8-A4DA-74B25B370850}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Servly.AspNetCore.Authentication", "src\Servly.AspNetCore.Authentication\Servly.AspNetCore.Authentication.csproj", "{54C522A6-768A-42F8-A4DA-74B25B370850}"
 EndProject
-Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Servly.AspNetCore.Authentication.UnitTests", "src\Authentication\test\Servly.AspNetCore.Authentication.UnitTests\Servly.AspNetCore.Authentication.UnitTests.csproj", "{30433C7B-7EB0-44D1-B30F-B1219FB3967B}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Servly.AspNetCore.Authentication.UnitTests", "src\Servly.AspNetCore.Authentication.UnitTests\Servly.AspNetCore.Authentication.UnitTests.csproj", "{30433C7B-7EB0-44D1-B30F-B1219FB3967B}"
 EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Persistence.Redis", "Persistence.Redis", "{2DFC55A4-977A-427E-BD66-4DDAF4728443}"
 EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "src", "src", "{E1F56FC5-13BA-4DD8-B3D6-0622A28A942C}"
 EndProject
-Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Servly.Persistence.Redis", "src\Persistence.Redis\src\Servly.Persistence.Redis\Servly.Persistence.Redis.csproj", "{FF855140-AAE9-4F4B-A0C1-54D8A57DDFF2}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Servly.Persistence.Redis", "src\Servly.Persistence.Redis\Servly.Persistence.Redis.csproj", "{FF855140-AAE9-4F4B-A0C1-54D8A57DDFF2}"
 EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "AspNetCore.Idempotency", "AspNetCore.Idempotency", "{DFAAB603-0919-474D-9577-30F81EC4EDEE}"
 EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "src", "src", "{F00E7D6B-7C43-4C03-B75C-38F702DFB3AC}"
 EndProject
-Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Servly.AspNetCore.Idempotency", "src\AspNetCore.Idempotency\src\Servly.AspNetCore.Idempotency\Servly.AspNetCore.Idempotency.csproj", "{0B8A0EBC-1A5A-4B0A-8DD4-D9D57A2A18D8}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Servly.AspNetCore.Idempotency", "src\Servly.AspNetCore.Idempotency\Servly.AspNetCore.Idempotency.csproj", "{0B8A0EBC-1A5A-4B0A-8DD4-D9D57A2A18D8}"
 EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "test", "test", "{D2947823-19D6-4114-AF58-DCA5B192245E}"
 EndProject
-Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Servly.AspNetCore.Idempotency.FunctionalTests", "src\AspNetCore.Idempotency\test\Servly.AspNetCore.Idempotency.FunctionalTests\Servly.AspNetCore.Idempotency.FunctionalTests.csproj", "{2E4F4E33-800C-40D9-9580-C4CB049EDFDF}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Servly.AspNetCore.Idempotency.FunctionalTests", "src\Servly.AspNetCore.Idempotency.FunctionalTests\Servly.AspNetCore.Idempotency.FunctionalTests.csproj", "{2E4F4E33-800C-40D9-9580-C4CB049EDFDF}"
 EndProject
-Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Servly.AspNetCore.Core", "src\Core\src\Servly.AspNetCore.Core\Servly.AspNetCore.Core.csproj", "{A9E7371D-A039-4FF1-B407-CB8137E0C727}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Servly.AspNetCore.Core", "src\Servly.AspNetCore.Core\Servly.AspNetCore.Core.csproj", "{A9E7371D-A039-4FF1-B407-CB8137E0C727}"
 EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "AspNetCore.ModelBinding", "AspNetCore.ModelBinding", "{0BBB789E-4FB3-4C20-97D5-C7D3C30D03A0}"
 EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "src", "src", "{63231236-45E5-40CD-8F38-4C9C888E0C87}"
 EndProject
-Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Servly.AspNetCore.ModelBinding.Hybrid", "src\AspNetCore.ModelBinding\src\Servly.AspNetCore.ModelBinding.Hybrid\Servly.AspNetCore.ModelBinding.Hybrid.csproj", "{34F41A6A-D9FE-42AC-8AAA-57F42A706AE5}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Servly.AspNetCore.ModelBinding.Hybrid", "src\Servly.AspNetCore.ModelBinding.Hybrid\Servly.AspNetCore.ModelBinding.Hybrid.csproj", "{34F41A6A-D9FE-42AC-8AAA-57F42A706AE5}"
 EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "test", "test", "{27140471-91C4-406D-8E31-DA0351E8BE83}"
 EndProject
-Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Servly.AspNetCore.ModelBinding.Hybrid.UnitTests", "src\AspNetCore.ModelBinding\test\Servly.AspNetCore.ModelBinding.Hybrid.UnitTests\Servly.AspNetCore.ModelBinding.Hybrid.UnitTests.csproj", "{7B5AD495-A25B-4F6D-9164-1B13A85C7018}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Servly.AspNetCore.ModelBinding.Hybrid.UnitTests", "src\Servly.AspNetCore.ModelBinding.Hybrid.UnitTests\Servly.AspNetCore.ModelBinding.Hybrid.UnitTests.csproj", "{7B5AD495-A25B-4F6D-9164-1B13A85C7018}"
 EndProject
-Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Servly.AspNetCore.ModelBinding.Hybrid.FunctionalTests", "src\AspNetCore.ModelBinding\test\Servly.AspNetCore.ModelBinding.Hybrid.FunctionalTests\Servly.AspNetCore.ModelBinding.Hybrid.FunctionalTests.csproj", "{972521DC-3428-4C77-B9E2-F68A1DFCC5D8}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Servly.AspNetCore.ModelBinding.Hybrid.FunctionalTests", "src\Servly.AspNetCore.ModelBinding.Hybrid.FunctionalTests\Servly.AspNetCore.ModelBinding.Hybrid.FunctionalTests.csproj", "{972521DC-3428-4C77-B9E2-F68A1DFCC5D8}"
 EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Solution Items", "Solution Items", "{3A6567F7-E25C-4476-9640-01C6B033F998}"
 	ProjectSection(SolutionItems) = preProject
@@ -76,13 +76,13 @@ Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Hosting", "Hosting", "{6666
 EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "src", "src", "{892A7674-7953-4D7F-847C-343C204FCEC1}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Servly.Hosting", "src\Hosting\src\Servly.Hosting\Servly.Hosting.csproj", "{DD71BA9D-6C88-453C-899C-AE406DCAD215}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Servly.Hosting", "src\Servly.Hosting\Servly.Hosting.csproj", "{DD71BA9D-6C88-453C-899C-AE406DCAD215}"
 EndProject
-Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "sample", "sample", "{17F18D74-8BD5-49C3-8664-B25D1888CD81}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Servly.Hosting.AspNetCore.Sample", "samples\Servly.Hosting.AspNetCore.Sample\Servly.Hosting.AspNetCore.Sample.csproj", "{FAAA57C1-084E-48C0-84B4-78D67905ADAA}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Servly.Hosting.AspNetCore.Sample", "src\Hosting\sample\Servly.Hosting.AspNetCore.Sample\Servly.Hosting.AspNetCore.Sample.csproj", "{FAAA57C1-084E-48C0-84B4-78D67905ADAA}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Servly.AspNetCore.Hosting", "src\Servly.AspNetCore.Hosting\Servly.AspNetCore.Hosting.csproj", "{5D169863-8A45-4B20-A596-6633B5D3AE3A}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Servly.AspNetCore.Hosting", "src\Hosting\src\Servly.AspNetCore.Hosting\Servly.AspNetCore.Hosting.csproj", "{5D169863-8A45-4B20-A596-6633B5D3AE3A}"
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "samples", "samples", "{CA031630-5872-48F9-BF6D-AA310438D53F}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -189,9 +189,8 @@ Global
 		{666618D7-A0F8-41A1-9647-C56BBBD43B01} = {5CCB10AB-4856-4564-94CE-CEA117E174B9}
 		{892A7674-7953-4D7F-847C-343C204FCEC1} = {666618D7-A0F8-41A1-9647-C56BBBD43B01}
 		{DD71BA9D-6C88-453C-899C-AE406DCAD215} = {892A7674-7953-4D7F-847C-343C204FCEC1}
-		{17F18D74-8BD5-49C3-8664-B25D1888CD81} = {666618D7-A0F8-41A1-9647-C56BBBD43B01}
-		{FAAA57C1-084E-48C0-84B4-78D67905ADAA} = {17F18D74-8BD5-49C3-8664-B25D1888CD81}
 		{5D169863-8A45-4B20-A596-6633B5D3AE3A} = {892A7674-7953-4D7F-847C-343C204FCEC1}
+		{FAAA57C1-084E-48C0-84B4-78D67905ADAA} = {CA031630-5872-48F9-BF6D-AA310438D53F}
 	EndGlobalSection
 	GlobalSection(ExtensibilityGlobals) = postSolution
 		SolutionGuid = {B3C7C43A-F68E-4E2D-948E-9A144BC8D513}
