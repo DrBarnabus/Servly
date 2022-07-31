@@ -28,15 +28,15 @@ public sealed class PackageNuget : FrostingTask<BuildContext>
         };
 
         string[] projectPaths = {
-            "./src/AspNetCore.Idempotency/src/Servly.AspNetCore.Idempotency",
-            "./src/AspNetCore.ModelBinding/src/Servly.AspNetCore.ModelBinding.Hybrid",
-            "./src/Authentication/src/Servly.Authentication",
-            "./src/Authentication/src/Servly.AspNetCore.Authentication",
-            "./src/Core/src/Servly.Core",
-            "./src/Core/src/Servly.AspNetCore.Core",
-            "./src/Hosting/src/Servly.AspNetCore.Hosting",
-            "./src/Hosting/src/Servly.Hosting",
-            "./src/Persistence.Redis/src/Servly.Persistence.Redis"
+            "./src/Servly.AspNetCore.Authentication",
+            "./src/Servly.AspNetCore.Core",
+            "./src/Servly.AspNetCore.Hosting",
+            "./src/Servly.AspNetCore.Idempotency",
+            "./src/Servly.AspNetCore.ModelBinding.Hybrid",
+            "./src/Servly.Authentication",
+            "./src/Servly.Core",
+            "./src/Servly.Hosting",
+            "./src/Servly.Persistence.Redis"
         };
 
         foreach (string project in projectPaths)
