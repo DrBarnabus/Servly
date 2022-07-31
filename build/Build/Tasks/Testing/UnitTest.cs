@@ -87,7 +87,7 @@ public sealed class UnitTest : FrostingTask<BuildContext>
             CoverletOutputFormat = CoverletOutputFormat.cobertura,
             CoverletOutputDirectory = Paths.TestResults,
             CoverletOutputName = $"{projectName}.coverage.xml",
-            Exclude = new List<string> { "[Servly*.UnitTests]*", "*.Sample" }
+            Exclude = new List<string> { "[Servly*.UnitTests]*", "[Servly*.FunctionalTests]*", "[*.Sample]*" }
         };
 
         context.DotNetTest(project.FullPath, settings, coverletSettings);
