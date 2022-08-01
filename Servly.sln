@@ -78,7 +78,7 @@ Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "src", "src", "{892A7674-795
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Servly.Hosting", "src\Servly.Hosting\Servly.Hosting.csproj", "{DD71BA9D-6C88-453C-899C-AE406DCAD215}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Servly.Hosting.AspNetCore.Sample", "samples\Servly.Hosting.AspNetCore.Sample\Servly.Hosting.AspNetCore.Sample.csproj", "{FAAA57C1-084E-48C0-84B4-78D67905ADAA}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Servly.AspNetCore.Hosting.Sample", "samples\Servly.AspNetCore.Hosting.Sample\Servly.AspNetCore.Hosting.Sample.csproj", "{FAAA57C1-084E-48C0-84B4-78D67905ADAA}"
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Servly.AspNetCore.Hosting", "src\Servly.AspNetCore.Hosting\Servly.AspNetCore.Hosting.csproj", "{5D169863-8A45-4B20-A596-6633B5D3AE3A}"
 EndProject
