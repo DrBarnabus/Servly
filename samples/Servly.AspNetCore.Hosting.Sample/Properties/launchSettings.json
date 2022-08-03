@@ -1,6 +1,6 @@
 ﻿{
   "profiles": {
-    "Servly.Hosting.AspNetCore.Sample": {
+    "Servly.AspNetCore.Hosting.Sample": {
       "commandName": "Project",
       "dotnetRunMessages": true,
       "launchBrowser": false,
