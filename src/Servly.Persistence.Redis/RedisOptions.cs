@@ -1,5 +1,6 @@
 ﻿namespace Servly.Persistence.Redis;
 
+[Obsolete($"{nameof(RedisOptions)} is deprecated, use {nameof(RedisProviderOptions)} instead.")]
 public class RedisOptions
 {
     public string ConnectionString { get; set; } = "localhost";
