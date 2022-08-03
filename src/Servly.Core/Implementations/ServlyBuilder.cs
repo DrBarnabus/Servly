@@ -47,23 +47,24 @@ internal class ServlyBuilder : IServlyBuilder
         AddBuildAction(services => services.AddSingleton<IInitializer, TInitializer>());
     }
 
-    public void AddOptions<TOptions>(string configurationSection, Func<TOptions, bool>? validate = null)
+    public void AddOptions<TOptions>(string sectionKey, string? instanceName = null,
+        Func<TOptions, bool>? validate = null)
         where TOptions : class, new()
     {
-        Guard.Assert(!string.IsNullOrEmpty(configurationSection), $"ConfigurationSection cannot be null or empty");
+        Guard.Assert(!string.IsNullOrEmpty(sectionKey), $"ConfigurationSection cannot be null or empty");
 
-        var optionsBuilder = Services.AddOptions<TOptions>()
-            .Bind(Configuration.GetSection(configurationSection));
+        var optionsBuilder = Services.AddOptions<TOptions>(instanceName ?? string.Empty)
+            .Bind(Configuration.GetSection(sectionKey));
 
         if (validate is not null)
-            optionsBuilder.Validate(validate, $"{typeof(TOptions).Name} options from Configuration Section '{configurationSection}' has failed validation");
+            optionsBuilder.Validate(validate, $"{typeof(TOptions).Name} options from Configuration Section '{sectionKey}' has failed validation");
     }
 
-    public TOptions GetOptions<TOptions>()
+    public TOptions GetOptions<TOptions>(string? instanceName = null)
         where TOptions : class, new()
     {
         var options = GetService<IOptionsSnapshot<TOptions>>();
-        return options.Value;
+        return instanceName is null ? options.Value : options.Get(instanceName);
     }
 
     public TService GetService<TService>()
