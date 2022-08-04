@@ -1,25 +1,25 @@
 ﻿using Microsoft.Extensions.DependencyInjection;
-using Servly.Core;
 using Servly.AspNetCore.Idempotency;
 using Servly.AspNetCore.Idempotency.Implementations;
+using Servly.Core;
 using Servly.AspNetCore.Idempotency.Middleware;
+using Servly.Core.Exceptions;
 
 // ReSharper disable once CheckNamespace
 namespace Servly.Extensions;
 
 public static class ServlyBuilderExtensions
 {
-    private const string IdempotencyMiddlewareModuleName = "Idempotency";
+    private const string ModuleName = "AspNetCore.Idempotency";
 
-    public static IServlyBuilder AddIdempotencyMiddleware(this IServlyBuilder builder)
+    public static IIdempotencyBuilder AddIdempotencyMiddleware(this IServlyBuilder builder)
     {
-        if (builder.TryRegisterModule(IdempotencyMiddlewareModuleName))
-            return builder;
+        if (builder.TryRegisterModule(ModuleName))
+            throw new ModuleAlreadyRegisteredException(ModuleName);
 
         builder.Services
-            .AddSingleton<IIdempotencyPersistenceProvider, RedisIdempotencyPersistenceProvider>()
             .AddScoped<IdempotencyMiddleware>();
 
-        return builder;
+        return new IdempotencyBuilder(builder);
     }
 }

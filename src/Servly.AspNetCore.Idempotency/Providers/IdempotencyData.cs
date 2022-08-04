@@ -1,4 +1,4 @@
-﻿namespace Servly.AspNetCore.Idempotency;
+﻿namespace Servly.AspNetCore.Idempotency.Providers;
 
 public class IdempotencyData
 {

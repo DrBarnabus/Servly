@@ -15,7 +15,11 @@
     </ItemGroup>
 
     <ItemGroup>
-      <ProjectReference Include="..\Servly.Persistence.Redis\Servly.Persistence.Redis.csproj" />
+      <ProjectReference Include="..\Servly.AspNetCore.Core\Servly.AspNetCore.Core.csproj" />
+    </ItemGroup>
+
+    <ItemGroup>
+        <InternalsVisibleTo Include="Servly.AspNetCore.Idempotency.Redis" />
     </ItemGroup>
 
 </Project>

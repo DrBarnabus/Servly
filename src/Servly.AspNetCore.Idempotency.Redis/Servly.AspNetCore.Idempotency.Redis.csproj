@@ -1,0 +1,18 @@
+<Project Sdk="Microsoft.NET.Sdk">
+
+    <PropertyGroup>
+        <TargetFramework>net6.0</TargetFramework>
+
+        <PackageId>Servly.AspNetCore.Idempotency.Redis</PackageId>
+        <PackageTags>Servly;AspNetCore;Idempotency;Idempotent;Handling;Middleware;Redis;</PackageTags>
+        <Description>
+            Redis persistence provider for the Servly.AspNetCore.Idempotency package using Servly.Persistence.Redis.
+        </Description>
+    </PropertyGroup>
+
+    <ItemGroup>
+        <ProjectReference Include="..\Servly.AspNetCore.Idempotency\Servly.AspNetCore.Idempotency.csproj" />
+        <ProjectReference Include="..\Servly.Persistence.Redis\Servly.Persistence.Redis.csproj" />
+    </ItemGroup>
+
+</Project>

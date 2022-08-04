@@ -32,6 +32,7 @@ public sealed class PackageNuget : FrostingTask<BuildContext>
             "./src/Servly.AspNetCore.Core",
             "./src/Servly.AspNetCore.Hosting",
             "./src/Servly.AspNetCore.Idempotency",
+            "./src/Servly.AspNetCore.Idempotency.Redis",
             "./src/Servly.AspNetCore.ModelBinding.Hybrid",
             "./src/Servly.Authentication",
             "./src/Servly.Core",

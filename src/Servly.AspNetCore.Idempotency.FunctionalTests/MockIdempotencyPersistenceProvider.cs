@@ -1,4 +1,6 @@
-﻿namespace Servly.AspNetCore.Idempotency.FunctionalTests;
+﻿using Servly.AspNetCore.Idempotency.Providers;
+
+namespace Servly.AspNetCore.Idempotency.FunctionalTests;
 
 public class MockIdempotencyPersistenceProvider : IIdempotencyPersistenceProvider
 {

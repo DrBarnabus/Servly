@@ -102,6 +102,8 @@ Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "src", "src", "{FF64E7E6-337
 EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Persistence", "Persistence", "{9249E698-AF18-4F06-873A-A18D70D82D05}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Servly.AspNetCore.Idempotency.Redis", "src\Servly.AspNetCore.Idempotency.Redis\Servly.AspNetCore.Idempotency.Redis.csproj", "{2826819F-C1D8-47A8-A3B4-409C359C06D0}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -172,6 +174,10 @@ Global
 		{5D169863-8A45-4B20-A596-6633B5D3AE3A}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{5D169863-8A45-4B20-A596-6633B5D3AE3A}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{5D169863-8A45-4B20-A596-6633B5D3AE3A}.Release|Any CPU.Build.0 = Release|Any CPU
+		{2826819F-C1D8-47A8-A3B4-409C359C06D0}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{2826819F-C1D8-47A8-A3B4-409C359C06D0}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{2826819F-C1D8-47A8-A3B4-409C359C06D0}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{2826819F-C1D8-47A8-A3B4-409C359C06D0}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
@@ -218,6 +224,7 @@ Global
 		{5D169863-8A45-4B20-A596-6633B5D3AE3A} = {FF64E7E6-3374-436C-A061-B2E31C736BE0}
 		{9249E698-AF18-4F06-873A-A18D70D82D05} = {5CCB10AB-4856-4564-94CE-CEA117E174B9}
 		{2DFC55A4-977A-427E-BD66-4DDAF4728443} = {9249E698-AF18-4F06-873A-A18D70D82D05}
+		{2826819F-C1D8-47A8-A3B4-409C359C06D0} = {F00E7D6B-7C43-4C03-B75C-38F702DFB3AC}
 	EndGlobalSection
 	GlobalSection(ExtensibilityGlobals) = postSolution
 		SolutionGuid = {B3C7C43A-F68E-4E2D-948E-9A144BC8D513}

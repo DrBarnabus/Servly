@@ -50,7 +50,7 @@ public static class ServlyBuilderExtensions
         var redisOptions = builder.GetOptions<RedisOptions>();
 
         builder.Services
-            .AddSingleton<IConnectionMultiplexer>(sp => ConnectionMultiplexer.Connect(redisOptions.ConnectionString))
+            .AddSingleton<IConnectionMultiplexer>(_ => ConnectionMultiplexer.Connect(redisOptions.ConnectionString))
             .AddSingleton<IRedisProvider, RedisProvider>();
 
         if (distributedCache)

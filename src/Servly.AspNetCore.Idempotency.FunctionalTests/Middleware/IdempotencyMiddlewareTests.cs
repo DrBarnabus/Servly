@@ -11,6 +11,7 @@ using Microsoft.Extensions.Primitives;
 using Servly.Extensions;
 using Servly.AspNetCore.Idempotency.Attributes;
 using Servly.AspNetCore.Idempotency.Middleware;
+using Servly.AspNetCore.Idempotency.Providers;
 using Shouldly;
 using Xunit;
 
