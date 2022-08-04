@@ -3,6 +3,10 @@
 All notable changes to this project will be automatically documented in this file.
 
 
+### [0.2.1](https://github.com/DrBarnabus/Servly/compare/v0.2.0...v0.2.1) (2022-08-04)
+
+_Changes to build and distribution only..._
+
 ## [0.2.0](https://github.com/DrBarnabus/Servly/compare/v0.1.0...v0.2.0) (2022-08-04)
 
 
