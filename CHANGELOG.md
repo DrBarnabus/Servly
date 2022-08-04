@@ -3,6 +3,25 @@
 All notable changes to this project will be automatically documented in this file.
 
 
+## [0.2.0](https://github.com/DrBarnabus/Servly/compare/v0.1.0...v0.2.0) (2022-08-04)
+
+
+### Features
+
+* **core:** add IChainedServlyBuilder and Instanced Options ([c88d018](https://github.com/DrBarnabus/Servly/commit/c88d018e3c3f9114c69912089e957493b6d7a02d)), closes [#16](https://github.com/DrBarnabus/Servly/issues/16) [#16](https://github.com/DrBarnabus/Servly/issues/16)
+* **hosting:** add AspNetCore support and ConfigureWebHost ([7fac1f7](https://github.com/DrBarnabus/Servly/commit/7fac1f7ad51d6f4f5f6b040a79735d0c071b00d0))
+* **hosting:** add ConfigureModules to ServlyHostBuilder ([f28ed96](https://github.com/DrBarnabus/Servly/commit/f28ed967f8fb01599e6bc3d5cbcc18e73629adca))
+* **hosting:** implement ServlyHostBuilder and ServlyHost ([dd70f55](https://github.com/DrBarnabus/Servly/commit/dd70f55973a58f0746069df1e4037e14f5fe7765))
+* **idempotency:** implemented updated Redis Persistence Pattern and HSET ([b7f561c](https://github.com/DrBarnabus/Servly/commit/b7f561c4b3a61f5db9cc55ba61e8a40a2d4444ab)), closes [#14](https://github.com/DrBarnabus/Servly/issues/14) [#14](https://github.com/DrBarnabus/Servly/issues/14)
+* **persistence.redis:** re-implement RedisPersistence layer with instance support ([6712b61](https://github.com/DrBarnabus/Servly/commit/6712b619aa99eb7650ac43891b644c145f3756ec)), closes [#13](https://github.com/DrBarnabus/Servly/issues/13) [#13](https://github.com/DrBarnabus/Servly/issues/13)
+
+
+### Bug Fixes
+
+* **core:** fix ServlyBuilderTests for AddOptions SectionKey validation ([03b0f79](https://github.com/DrBarnabus/Servly/commit/03b0f79ba646f8ff2274fdaf9973b4d5bacd19f4))
+* **hosting:** correctly stop host on WaitForShutdownAsync ([4fc23ad](https://github.com/DrBarnabus/Servly/commit/4fc23ad32f562c1da5cd86acbb0b0f0fcf165ca4))
+* **samples:** fix Hosting Sample launchSettings.json ([0e02489](https://github.com/DrBarnabus/Servly/commit/0e02489c7cb474b8eaaae75342eb206a79b39acf))
+
 ## 0.1.0 (2022-03-15)
 
 
