@@ -11,7 +11,7 @@ namespace Servly.Extensions;
 
 public static class IdempotencyBuilderExtensions
 {
-    public static IIdempotencyBuilder UseRedisPersistence(this IIdempotencyBuilder builder, string instanceName = "Default")
+    public static IIdempotencyBuilder UseRedisPersistence(this IIdempotencyBuilder builder, string instanceName = Constants.DefaultInstanceName)
     {
         if (builder is not IdempotencyBuilder redisProviderBuilder)
             throw new ChainedServlyBuilderTypeException(typeof(IdempotencyBuilder), builder.GetType());
