@@ -1,5 +1,6 @@
 issue-labels-include:
 - 'breaking-change'
+- 'type: epic'
 - 'type: feature'
 - 'type: fix'
 - 'type: perf'
@@ -17,6 +18,9 @@ issue-labels-alias:
 - name: breaking-change
   header: 'Breaking Change'
   plural: 'Breaking Changes'
+- name: 'type: epic'
+  header: 'Completed Epic'
+  plural: 'Completed Epics'
 - name: 'type: feature'
   header: 'Feature'
   plural: 'Features'
