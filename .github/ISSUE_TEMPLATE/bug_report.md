@@ -1,32 +1,23 @@
 ---
 name: "\U0001F41E Bug report"
-about: Report a bug in Servly
-title: "[Bug]"
-labels: bug
+about: A report of a bug in an existing version
+title: ""
+labels: ['type: bug', 'needs-triage']
 assignees: ""
 ---
 
 # 🐞 Bug Report
-
-### Affected Package(s)
-<!-- If you can, can you pin-point one or more of the packages as the source of the bug? -->
-<!-- ✍️ edit: --> This issue is caused by the <...> package(s).
-
-### Is this a regression?
-<!-- Did this behavior use to work in the previous version? -->
-<!-- ✍️ edit: --> Yes, a previous version in which this bug was not present was: ...
 
 ### Description
 <!-- ✍️ edit: --> A clear and concise description of the problem...
 
 ## 🔬 Minimal Reproduction Steps
 <!-- If possible, please share a minimal set of steps to reproduce the issue. -->
-<!-- ✍️ edit: --> Reproduction Steps...
+<!-- ✍️ edit: -->
 
 ## 🔥 Exception or Error Message
 <!-- If the issue is accompanied by an exception or an error, please share it in the tags below: -->
-<!-- ✍️ -->
-<pre><code></code></pre>
+<pre><code><!-- ✍️ --></code></pre>
 
 ## 🌍 Your Environment
 
