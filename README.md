@@ -12,9 +12,9 @@
 
 **Servly** is an in development open-source and cross-platform framework to assist building modern cloud-native microservices on the [.NET](https://dot.net) platform.
 
-It consist of a number of configurable and mixable modules to give you flexibility while constructing your microservices including support for [multi-tenancy](https://en.wikipedia.org/wiki/Multitenancy) scenarios.
+It will consist of a number of configurable and mixable modules to give you flexibility while constructing your microservices including support for [multi-tenancy](https://en.wikipedia.org/wiki/Multitenancy) scenarios.
 
-# :construction: Active Development
+# 🚧 Active Development
 
 Servly is still under heavy initial development and the functionality and/or interfaces that it provides are subject to change without warning between package versions until the `v1` release.
 
@@ -24,26 +24,34 @@ Once `v1` has been solidified for release, full [semantic versioning](https://se
 
 The goals for this project are still in flux, currently the following is being targeted to be implemented for the `v1` release.
 
+```
+Planned       = 🚧
+Work Started  = 🏗
+v1 Completed  = ✔
+Considering   = ❓
+```
+
 ### General
 
-- **Contextual Authentication**: Access a contextual state of current authentication while abstracting the authentication method, intended for use in DDD scenarios.
-- **Data Persistence Providers**: Providers for common persistence methods such as [Redis](https://redis.io/) and [EF Core](https://docs.microsoft.com/en-us/ef/core/) with wrappers for common scenarios.
-- **Configuration**: Standardized and low effort configuration helpers to reduce setup cost of new services.
-- **Logging**: Standardized and low effort logging configuration to reduce setup cost of new services.
-- **CQRS**: Either an integration into an existing package or a greenfield implementation of Command Query Responsibility Segregation pattern.
-- **Integration Events**: Full featured events system with support for both [RabbitMQ](https://www.rabbitmq.com/) and [Azure Service Bus](https://docs.microsoft.com/en-us/azure/service-bus-messaging/).
+- **Contextual Authentication (✔)**: Access a contextual state of current authentication while abstracting the authentication method, intended for use in DDD scenarios.
+- **Data Persistence Providers (🏗)**: Persistence Providers (used internally initially) for common persistence solutions. (Redis, EF Core)
+  - **Redis (✔)**: A provider for [Redis](https://redis.io/) for use with other Services.
+  - **EF Core (❓)**: A provider for [EF Core](https://docs.microsoft.com/en-us/ef/core/) for use with other Services.
+- **Service Hosting (✔)**: Helpers for setting up services and application pipeline to reduce setup effort for new services.
+  - **Configuration (🚧)**: Standardized and low effort configuration setup to reduce boilerplate in service startup.
+  - **Logging (🚧)**: Standardized and low effort logging setup to reduce boilerplate in service startup.
+- **Request Idempotency (✔)**: Middleware to enable idempotent http request handling and prevent duplicate execution of sensitive requests.
+- **Message Bus (🚧)**: Full featured events message bus system for inter service communication.
+  - **RabbitMQ (🚧)**: Implementation of Message Bus using [RabbitMQ](https://www.rabbitmq.com/) as a provider.
+  - **Azure Service Bus (❓)**: Implementation of Message Bus using [Azure Service Bus](https://docs.microsoft.com/en-us/azure/service-bus-messaging/) as a provider.
+- **Caching (❓)**: Full featured caching implementation providing; Memory, Distributed and Tiered caching.
+- **CQRS (🚧)**: Integration into an existing package or a new implementation of a Command Query Responsibility pattern.
 
 ### Multi-tenancy
 
-- **Tenant Identification and Configuration**: Implementation of a fully customizable Tenant identification and configuration scheme to allow handling tenant specific requests with specific changes.
-- **Data Persistence**: Multi-tenancy aware persistence providers. [EF Core](https://docs.microsoft.com/en-us/ef/core/) specifically with support for Database-per-Tenant, Single Database and Sharded Database scenarios.
-- **Caching**: Multi-tenant compatible caching with a choice of backing methods; Memory, Distributed ([Redis](https://redis.io/)) or [FusionCache](https://github.com/jodydonetti/ZiggyCreatures.FusionCache).
-
-### AspNetCore
-
-- **Fully Integrated**: Fully integrated with the general and Multi-tenancy features listed above.
-- **Request Idempotency**: Middleware to enable idempotent http request handling and prevent duplicate execution of sensitive requests.
-- **Service Hosting**: Helpers for setting up services and application pipeline to reduce setup effort for new services.
+- **Tenant Identification and Specific Configuration (❓)**: Implementation of a fully customizable Tenant identification and configuration scheme to allow handling tenant specific requests with specific configuration.
+- **Tenant Aware Data Persistence Providers (❓)**: Extension to Persistence Providers with support for Tenant Isolation.
+- **Tenant Aware Caching (❓)**: Extension to Caching with support for Tenant Isolation.
 
 # Getting Started
 
