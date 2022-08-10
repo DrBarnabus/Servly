@@ -1,13 +1,13 @@
 ﻿{
-  "profiles": {
-    "Servly.AspNetCore.Hosting.Sample": {
-      "commandName": "Project",
-      "dotnetRunMessages": true,
-      "launchBrowser": false,
-      "applicationUrl": "https://localhost:7001;http://localhost:7000",
-      "environmentVariables": {
-        "ASPNETCORE_ENVIRONMENT": "Local"
-      }
+    "profiles": {
+        "Servly.AspNetCore.Hosting.Sample": {
+            "commandName": "Project",
+            "dotnetRunMessages": true,
+            "launchBrowser": false,
+            "applicationUrl": "https://localhost:7001;http://localhost:7000",
+            "environmentVariables": {
+                "ASPNETCORE_ENVIRONMENT": "Local"
+            }
+        }
     }
-  }
 }

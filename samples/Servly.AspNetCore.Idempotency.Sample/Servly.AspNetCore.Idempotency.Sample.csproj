@@ -1,0 +1,16 @@
+<Project Sdk="Microsoft.NET.Sdk.Web">
+
+    <PropertyGroup>
+        <TargetFramework>net6.0</TargetFramework>
+        <Nullable>enable</Nullable>
+        <ImplicitUsings>enable</ImplicitUsings>
+        <DockerDefaultTargetOS>Linux</DockerDefaultTargetOS>
+    </PropertyGroup>
+
+    <ItemGroup>
+      <ProjectReference Include="..\..\src\Servly.AspNetCore.Hosting\Servly.AspNetCore.Hosting.csproj" />
+      <ProjectReference Include="..\..\src\Servly.AspNetCore.Idempotency.Redis\Servly.AspNetCore.Idempotency.Redis.csproj" />
+      <ProjectReference Include="..\..\src\Servly.AspNetCore.Idempotency\Servly.AspNetCore.Idempotency.csproj" />
+    </ItemGroup>
+
+</Project>
