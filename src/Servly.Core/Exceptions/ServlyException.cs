@@ -12,5 +12,5 @@ public class ServlyException : Exception
     {
     }
 
-    public virtual string Code { get; } = "default";
+    public virtual string Code => "default";
 }

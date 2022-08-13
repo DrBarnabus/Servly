@@ -129,7 +129,7 @@ public class ServlyBuilderTests
         var sut = new Core.Implementations.ServlyBuilder(mockServices.Object, mockConfiguration.Object);
 
         var exception = Should.Throw<ArgumentException>(() => sut.AddOptions<ServlyOptions>(null!));
-        exception.Message.ShouldBe("SectionKey cannot be null or empty (Parameter '!string.IsNullOrEmpty(sectionKey)')");
+        exception.Message.ShouldBe("sectionKey cannot be null or empty (Parameter '!string.IsNullOrEmpty(sectionKey)')");
     }
 
     [Fact]
@@ -140,7 +140,7 @@ public class ServlyBuilderTests
         var sut = new Core.Implementations.ServlyBuilder(mockServices.Object, mockConfiguration.Object);
 
         var exception = Should.Throw<ArgumentException>(() => sut.AddOptions<ServlyOptions>(""));
-        exception.Message.ShouldBe("SectionKey cannot be null or empty (Parameter '!string.IsNullOrEmpty(sectionKey)')");
+        exception.Message.ShouldBe("sectionKey cannot be null or empty (Parameter '!string.IsNullOrEmpty(sectionKey)')");
     }
 
     [Fact]

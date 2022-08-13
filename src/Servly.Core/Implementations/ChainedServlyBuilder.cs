@@ -1,5 +1,8 @@
-﻿namespace Servly.Core.Implementations;
+﻿using System.Diagnostics.CodeAnalysis;
 
+namespace Servly.Core.Implementations;
+
+[ExcludeFromCodeCoverage]
 public abstract class ChainedServlyBuilder<TBuilder> : IChainedServlyBuilder<TBuilder>
     where TBuilder : IChainedServlyBuilder<TBuilder>
 {

@@ -11,7 +11,9 @@ public static class ServiceCollectionExtensions
 {
     private const string MainConfigurationSection = "Servly";
 
-    public static IServiceCollection AddServly(this IServiceCollection services, IConfiguration configuration,
+    public static IServiceCollection AddServly(
+        this IServiceCollection services,
+        IConfiguration configuration,
         Action<IServlyBuilder>? configureServly = null)
     {
         var servlyBuilder = ServlyBuilder.Create(services, configuration);
@@ -44,21 +46,21 @@ public static class ServiceCollectionExtensions
             Console.Write(fullWidthSeparatorString);
         }
 
-        if (servlyOptions.DisplayStartupInformation)
-        {
-            if (!servlyOptions.DisplayStartupBanner)
-                Console.Write(fullWidthSeparatorString);
+        if (!servlyOptions.DisplayStartupInformation)
+            return;
 
-            var startupInformation = servlyBuilder.GetService<IEnumerable<IStartupInformation>>().ToList();
-
-            foreach (var startupInfo in startupInformation)
-            {
-                Console.WriteLine(startupInfo.SectionTitle);
-                foreach ((string key, string value) in startupInfo.Values.OrderBy(v => v.Key))
-                    Console.WriteLine($"    {key}: {value}");
-            }
-
+        if (!servlyOptions.DisplayStartupBanner)
             Console.Write(fullWidthSeparatorString);
+
+        var startupInformation = servlyBuilder.GetService<IEnumerable<IStartupInformation>>().ToList();
+
+        foreach (var startupInfo in startupInformation)
+        {
+            Console.WriteLine(startupInfo.SectionTitle);
+            foreach ((string key, string value) in startupInfo.Values.OrderBy(v => v.Key))
+                Console.WriteLine($"    {key}: {value}");
         }
+
+        Console.Write(fullWidthSeparatorString);
     }
 }

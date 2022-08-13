@@ -47,11 +47,13 @@ internal class ServlyBuilder : IServlyBuilder
         AddBuildAction(services => services.AddSingleton<IInitializer, TInitializer>());
     }
 
-    public void AddOptions<TOptions>(string sectionKey, string? instanceName = null,
+    public void AddOptions<TOptions>(
+        string sectionKey,
+        string? instanceName = null,
         Func<TOptions, bool>? validate = null)
         where TOptions : class, new()
     {
-        Guard.Assert(!string.IsNullOrEmpty(sectionKey), $"SectionKey cannot be null or empty");
+        Guard.Assert(!string.IsNullOrEmpty(sectionKey), $"{nameof(sectionKey)} cannot be null or empty");
 
         var optionsBuilder = Services.AddOptions<TOptions>(instanceName ?? string.Empty)
             .Bind(Configuration.GetSection(sectionKey));

@@ -7,5 +7,5 @@ public class AlreadyBuiltException : ServlyException
     {
     }
 
-    public override string Code { get; } = "already_built";
+    public override string Code => "already_built";
 }
